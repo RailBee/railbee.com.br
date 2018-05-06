@@ -1,20 +1,20 @@
 ;(function () {
-	
+
 	'use strict';
 
-	// iPad and iPod detection	
+	// iPad and iPod detection
 	var isiPad = function(){
 	  return (navigator.platform.indexOf("iPad") != -1);
 	};
 
 	var isiPhone = function(){
 	    return (
-	      (navigator.platform.indexOf("iPhone") != -1) || 
+	      (navigator.platform.indexOf("iPhone") != -1) ||
 	      (navigator.platform.indexOf("iPod") != -1)
 	    );
 	};
 
-	
+
 	// Fast Click for ( Mobiles/Tablets )
 	var mobileFastClick = function() {
 		if ( isiPad() && isiPhone()) {
@@ -28,7 +28,7 @@
 			var el = $(this);
 			setTimeout(function() {
 				el.velocity(
-					{ opacity: o, marginTop: mtop }, 
+					{ opacity: o, marginTop: mtop },
 					{ duration: duration }
 				);
 			},  k * mul );
@@ -39,7 +39,7 @@
 				marginTop: mtop
 			}, { duration: duration });
 		}, (navLi.length + 1) * mul );
-		
+
 	};
 
 	var burgerMenu = function() {
@@ -47,11 +47,11 @@
 			$(this).toggleClass('active');
 			$('body').toggleClass('nav-active');
 			if ($('body').hasClass('nav-active')) {
-				menuAnimate(1, 10, 1000, 50);	
+				menuAnimate(1, 10, 1000, 50);
 			} else {
-				menuAnimate(0, 0, 1, 0);	
+				menuAnimate(0, 0, 1, 0);
 			}
-			
+
 		});
 	};
 
@@ -63,31 +63,31 @@
 			$("body").css("overflow","auto");
 		});
 	};
-	
+
 
 	// Easy Repsonsive Tabs
 	var responsiveTabs = function(){
 		$('#fh5co-tab-feature').easyResponsiveTabs({
 	      type: 'default',
-	      width: 'auto', 
-	      fit: true, 
+	      width: 'auto',
+	      fit: true,
 	      inactive_bg: '',
 	      active_border_color: '',
 	      active_content_border_color: '',
 	      closed: 'accordion',
 	      tabidentify: 'hor_1'
-	            
+
 	    });
 	    $('#fh5co-tab-feature-center').easyResponsiveTabs({
 	      type: 'default',
 	      width: 'auto',
-	      fit: true, 
+	      fit: true,
 	      inactive_bg: '',
 	      active_border_color: '',
 	      active_content_border_color: '',
-	      closed: 'accordion', 
-	      tabidentify: 'hor_1' 
-	      
+	      closed: 'accordion',
+	      tabidentify: 'hor_1'
+
 	    });
 	    $('#fh5co-tab-feature-vertical').easyResponsiveTabs({
 	      type: 'vertical',
@@ -149,7 +149,17 @@
 		    return false;
 		});
 	}
-	
+
+	 //Smooth scroll Contact
+	 $('.fh5co-gocontact').click(function(event){
+
+	 		$('html, body').animate({
+	 				scrollTop: 1300
+	 		}, 500);
+
+	 		event.preventDefault();
+	 		return false;
+	 });
 
 	$(function(){
 		burgerMenu();
