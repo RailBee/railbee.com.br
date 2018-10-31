@@ -117,7 +117,7 @@ ul, ol {
   line-height: 24px;
 }
 ul ul, ul ol, ol ul, ol ol {
-  padding-left: 25px;
+  padding-left: 0px;
 }
 
 #fh5co-header {
@@ -128,7 +128,7 @@ ul ul, ul ol, ol ul, ol ol {
   color: #ffffff;
 }
 #fh5co-header #fh5co-logo {
-  margin-top: 50px;
+  margin-top: 20px;
   z-index: 17;
   position: relative;
 }
@@ -141,26 +141,26 @@ ul ul, ul ol, ol ul, ol ol {
   background-repeat: no-repeat;
   background-position: center bottom;
   position: relative;
-  height: 650px;
+  height: 200px;
   z-index: 8;
 }
 #fh5co-hero a {
-  border-bottom: 1px solid #28bbf8;
+  border-bottom: 0px solid #28bbf8;
   color: #ffffff;
 }
 #fh5co-hero .fh5co-hero-btn {
-  font-size: 20px;
+  font-size: 0px;
   color: #ffffff;
 }
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 200px) {
   #fh5co-hero .fh5co-hero-btn {
     width: 100%;
     display: block;
   }
 }
 #fh5co-hero .fh5co-hero-text-wrap {
-  padding-top: 100px;
-  height: 650px;
+  padding-top: 0px;
+  height: 235px;
   display: table;
   width: 100%;
   z-index: 10;
@@ -178,7 +178,7 @@ ul ul, ul ol, ol ul, ol ol {
 }
 #fh5co-hero .fh5co-hero-text-wrap .fh5co-hero-text {
   display: table-cell;
-  vertical-align: middle;
+  vertical-align: bottom;
   width: 100%;
   text-align: center;
   color: #fff;
@@ -189,8 +189,9 @@ ul ul, ul ol, ol ul, ol ol {
   letter-spacing: 6px;
 }
 #fh5co-hero .fh5co-hero-text-wrap .fh5co-hero-text h1 {
-  font-size: 100px;
-  line-height: 112px;
+  font-size: 20px;
+  line-height: 42px;
+  color: #2e2e2e;
   font-family: "Montserrat", sans-serif;
 }
 @media screen and (max-width: 768px) {
