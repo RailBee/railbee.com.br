@@ -298,6 +298,11 @@ main[role="main"], #fh5co-blog {
   }
 }
 
+#fh5co-latest-project {
+  background: #3e4091;
+  padding: 5em 0;
+}
+
 #fh5co-crew {
   background: #00FF7F;
   padding: 5em 0;
@@ -445,10 +450,10 @@ main[role="main"], #fh5co-blog {
   padding: 30px 0;
 }
 .nav-active #fh5co-main-nav-wrap #fh5co-main-nav li a:hover {
-  color: #28bbf8;
+  color: #02a95c;
 }
 .nav-active #fh5co-main-nav-wrap #fh5co-main-nav li.active a {
-  color: #28bbf8;
+  color: #02a95c;
 }
 .nav-active #fh5co-main-nav-wrap .fh5co-social {
   color: #ffffff;
