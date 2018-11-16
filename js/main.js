@@ -149,7 +149,24 @@
 		    return false;
 		});
 	}
-
+	//Smooth scroll about
+	$('#aboutMenu').click(function(event){
+		$('html, body').animate({
+			scrollTop: 300
+		}, 500);
+	});
+	//Smooth scroll about
+	$('#newsMenu').click(function(event){
+		$('html, body').animate({
+			scrollTop: 2000
+		}, 500);
+	});
+	//Smooth scroll about
+	$('#contactMenu').click(function(event){
+		$('html, body').animate({
+			scrollTop: 3000
+		}, 500);
+	});
 	 //Smooth scroll Contact
 	 $('.fh5co-gocontact').click(function(event){
 
@@ -161,6 +178,17 @@
 	 		return false;
 	 });
 
+/* 	var scrollAbout = function(){
+ 		$('#about').click(function(event){
+ 			$('html, body').animate({
+ 				scrollTop: 200
+ 			}, 500);
+ 			event.preventDefault();
+ 			return false;
+ 	}
+};*/
+
+
 	$(function(){
 		burgerMenu();
 		menuWrapScroll();
@@ -169,6 +197,7 @@
 		magnifPopup();
 		owlCrouselFeatureSlide();
 		sScrollTop();
+		scrollAbout();
 	});
 
 
