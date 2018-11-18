@@ -152,19 +152,19 @@
 	//Smooth scroll about
 	$('#aboutMenu').click(function(event){
 		$('html, body').animate({
-			scrollTop: 300
+			scrollTop: 380
 		}, 500);
 	});
 	//Smooth scroll about
 	$('#newsMenu').click(function(event){
 		$('html, body').animate({
-			scrollTop: 2000
+			scrollTop: 2050
 		}, 500);
-	});
+	})
 	//Smooth scroll about
 	$('#contactMenu').click(function(event){
 		$('html, body').animate({
-			scrollTop: 3000
+			scrollTop: 2880
 		}, 500);
 	});
 	 //Smooth scroll Contact
