@@ -150,21 +150,27 @@
 		});
 	}
 	//Smooth scroll about
+	$('#aboutTop').click(function(event){
+		$('html, body').animate({
+			scrollTop: 0
+		}, 500);
+	});
+	//Smooth scroll about
 	$('#aboutMenu').click(function(event){
 		$('html, body').animate({
-			scrollTop: 380
+			scrollTop: 1000
 		}, 500);
 	});
 	//Smooth scroll about
 	$('#newsMenu').click(function(event){
 		$('html, body').animate({
-			scrollTop: 2050
+			scrollTop: 2000
 		}, 500);
 	})
 	//Smooth scroll about
 	$('#contactMenu').click(function(event){
 		$('html, body').animate({
-			scrollTop: 2880
+			scrollTop: 2800
 		}, 500);
 	});
 	 //Smooth scroll Contact
