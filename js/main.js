@@ -111,6 +111,7 @@
 		    responsiveClass: true,
 		    nav: true,
 		    dots: true,
+				autoplay: false,
 		    smartSpeed: 500,
 		    navText: [
 		      "<i class='ti-arrow-left owl-direction'></i>",
