@@ -110,7 +110,7 @@
 		    margin: 0,
 		    responsiveClass: true,
 		    nav: true,
-		    dots: false,
+		    dots: true,
 				autoplay: false,
 		    smartSpeed: 500,
 		    navText: [
