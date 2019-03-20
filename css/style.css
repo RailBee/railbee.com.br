@@ -255,6 +255,9 @@ main[role="main"], #fh5co-blog {
 .fh5co-heading-with-border .fh5co-border.fh5co-border-gray {
   background: #ebebeb;
 }
+.fh5co-heading-with-border .fh5co-heading-with-border-text-light {
+  color: #ebebeb;
+}
 
 .fh5co-em {
   font-family: "Playfair Display", serif;
@@ -306,6 +309,14 @@ main[role="main"], #fh5co-blog {
 #fh5co-latest-project .fh5co-section-video {
   padding-top: 2.5em;
 }
+
+#fh5co-latest-project .fh5co-section-slideshow {
+}
+
+.fh5co-section-slideshow .fh5co-section-slideshow-text {
+  color: #ebebeb;
+}
+
 
 #fh5co-crew {
   background: #00FF7F;
