@@ -303,6 +303,10 @@ main[role="main"], #fh5co-blog {
   padding: 1em 0;
 }
 
+#fh5co-latest-project .fh5co-section-video {
+  padding-top: 2.5em;
+}
+
 #fh5co-crew {
   background: #00FF7F;
   padding: 5em 0;
@@ -788,7 +792,7 @@ Components
 
 .owl-carousel .owl-controls .owl-nav .owl-next,
 .owl-carousel-posts .owl-controls .owl-nav .owl-next {
-  right: -50px;
+  right: -60px;
 }
 .owl-carousel .owl-controls .owl-nav .owl-next:hover,
 .owl-carousel-posts .owl-controls .owl-nav .owl-next:hover {
@@ -797,7 +801,7 @@ Components
 
 .owl-carousel .owl-controls .owl-nav .owl-prev,
 .owl-carousel-posts .owl-controls .owl-nav .owl-prev {
-  left: -50px;
+  left: -60px;
 }
 .owl-carousel .owl-controls .owl-nav .owl-prev:hover,
 .owl-carousel-posts .owl-controls .owl-nav .owl-prev:hover {
@@ -872,7 +876,7 @@ Components
 
 .owl-carousel-fullwidth.owl-theme .owl-dots {
   bottom: 0;
-  margin-bottom: -2.5em;
+  margin-bottom: -1.0em;
 }
 
 .owl-theme .owl-dots .owl-dot span {
