@@ -2,7 +2,7 @@
 /*
 //////////////////////////////////////////////////////
 
-FREE HTML5 TEMPLATE
+FREE HTML5 TEMPLATE 
 DESIGNED & DEVELOPED by FREEHTML5.CO
 
 //////////////////////////////////////////////////////
@@ -72,24 +72,24 @@ body {
 	color: $brand-darker;
 }
 
-::-webkit-selection {
-	color: $brand-white;
-	background: $brand-primary;
+::-webkit-selection { 
+	color: $brand-white;  
+	background: $brand-primary; 
 }
-::-moz-selection {
-	color: $brand-white;
-	background: $brand-primary;
+::-moz-selection { 
+	color: $brand-white;  
+	background: $brand-primary; 
 }
-::selection {
-	color: $brand-white;
-	background: $brand-primary;
-}
+::selection { 
+	color: $brand-white;  
+	background: $brand-primary; 
+} 
 
 
 a {
 	@include transition(.5s);
 	&:hover {
-
+		
 	}
 	&:hover, &:active, &:focus {
 		outline: none;
@@ -98,7 +98,7 @@ a {
 }
 
 figure {
-
+	
 	&.fh5co-with-caption {
 		float: left;
 		width: 100%;
@@ -119,7 +119,7 @@ figure {
 
 h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
 	margin: 0 0 20px 0;
-	padding: 0;
+	padding: 0;	
 	font-family: $sans-serif;
 	font-weight: 400;
 }
@@ -183,13 +183,13 @@ ul, ol {
 		a {
 
 			display: block;
-
+			
 		}
 	}
 }
 
 #fh5co-hero {
-	//background-size: cover;
+	background-size: cover;
 	background-repeat: no-repeat;
 	background-position: center bottom;
 	position: relative;
@@ -201,7 +201,7 @@ ul, ol {
 	}
 	.fh5co-hero-btn {
 		font-size: 20px;
-		color: $brand-white;
+		color: $brand-white;		
 		@media screen and (max-width: $screen-xs) {
 			width: 100%;
 			display: block;
@@ -226,7 +226,7 @@ ul, ol {
 			vertical-align: middle;
 			width: 100%;
 			text-align: center;
-
+			
 			color: #fff;
 			.fh5co-uppercase-heading-sm {
 				color: $brand-white;
@@ -234,7 +234,7 @@ ul, ol {
 				letter-spacing: 6px;
 			}
 			h1 {
-				font-size: 30px;
+				font-size: 100px;
 				line-height: 112px;
 				font-family: $sans-serif;
 				@media screen and (max-width: $screen-sm ) {
@@ -390,11 +390,11 @@ main[role="main"], #fh5co-blog {
 			margin-left: -50px;
 			margin-top: -50px;
 			background: $brand-white;
-
+		
 			width: 100px;
 			height: 100px;
 			display: table;
-			border-radius: 50%;
+			border-radius: 50%; 
 			box-shadow:0 2px 5px 0 rgba(0,0,0,.26),0 2px 10px 0 rgba(0,0,0,.16);
 			text-align: center;
 			> i {
@@ -422,7 +422,7 @@ main[role="main"], #fh5co-blog {
 	}
 }
 
-// Main Navigation
+// Main Navigation 
 #fh5co-main-nav-wrap {
 	display: none;
 }
@@ -459,14 +459,14 @@ main[role="main"], #fh5co-blog {
 		}
 		#fh5co-main-nav {
 			text-align: center;
-			padding: 0;
-			margin: 30px 0;
+			padding: 0;	
+			margin: 30px 0;	
 			z-index: 1001;
 
 			li {
 				list-style: none;
-				padding: 0;
-				margin: 0 0 0px 0;
+				padding: 0;	
+				margin: 0 0 0px 0;	
 				opacity: 0;
 				a {
 					font-size: 40px;
@@ -477,7 +477,7 @@ main[role="main"], #fh5co-blog {
 					padding: 30px 0;
 					&:hover {
 						color: $brand-primary;
-					}
+					}		
 				}
 				&.active {
 					a {
@@ -530,7 +530,7 @@ footer {
 	background: $brand-darker;
 	color: $brand-gray-alt;
 	h2, h3, h4, h5, h6 {
-		color: $brand-gray!important;
+		color: $brand-gray!important;	
 	}
 	> .container {
 		padding-top: 4em;
@@ -547,7 +547,7 @@ footer {
 			color: $brand-white;
 		}
 	}
-	float: left;
+	float: left; 
 	width: 100%;
 	.fh5co-footer-title {
 		font-family: $sans-serif;
@@ -585,7 +585,7 @@ footer {
 				font-size: 20px;
 				padding: 4px 7px;
 			}
-		}
+		}	
 	}
 }
 
@@ -686,10 +686,10 @@ footer {
 
 
 
-/*
+/* 
 ========================================
 
-Components
+Components 
 
 ========================================
 */
@@ -757,18 +757,18 @@ Components
 	background: $brand-warning;
 	border: 2px solid $brand-warning;
 }
-.btn-primary,
-.btn-success,
-.btn-info,
-.btn-warning,
+.btn-primary, 
+.btn-success, 
+.btn-info, 
+.btn-warning, 
 .btn-danger {
 	border-color: transparent;
 }
-.btn-default,
-.btn-primary,
-.btn-success,
-.btn-info,
-.btn-warning,
+.btn-default, 
+.btn-primary, 
+.btn-success, 
+.btn-info, 
+.btn-warning, 
 .btn-danger {
 	&:hover, &:active, &:focus {
 		background: $brand-darker-2;
@@ -776,11 +776,11 @@ Components
 	}
 }
 
-// Input Text
+// Input Text 
 .form-control {
 	box-shadow: none!important;
 	border: 2px solid #ccc;
-	&:hover,
+	&:hover, 
 	&:focus,
 	&:active {
 		outline: none;
@@ -843,7 +843,7 @@ Components
 	}
 	&:hover {
 		i {
-			color: $brand-black;
+			color: $brand-black;		
 		}
 	}
 }
@@ -886,7 +886,7 @@ Components
 	text-align: center;
 }
 .owl-carousel-fullwidth.owl-theme .owl-dots {
-	bottom: 0;
+	bottom: 0;	
 	margin-bottom: -2.5em;
 }
 .owl-theme .owl-dots .owl-dot span {
@@ -919,7 +919,7 @@ Components
 }
 .resp-content-active, .resp-accordion-active {
     display: block;
-
+    
 }
 .fh5co-tab-menu-icon {
 	font-size: 20px;
@@ -940,7 +940,7 @@ Components
 			margin-bottom: 20px!important;
 		}
 		@media screen and (max-width: $screen-sm) {
-			margin-bottom: 20px!important;
+			margin-bottom: 20px!important;	
 			float: left;
 			width: 100%;
 		}
@@ -988,11 +988,11 @@ Components
 			border-top: none;
 			ul {
 				padding: 0;
-				margin: 0;
+				margin: 0;	
 				li {
 					list-style: none;
 					padding: 0;
-					margin: 0 0 10px 0;
+					margin: 0 0 10px 0;	
 				}
 			}
 		}
@@ -1002,7 +1002,7 @@ Components
 				border-top: none;
 			}
 		}
-
+		
 	}
 }
 
@@ -1069,7 +1069,7 @@ Components
 					@media screen and (max-width: $screen-xs) {
 						width: 20%;
 					}
-
+					
 				}
 				.fh5co-feature-blurb-title {
 					letter-spacing: 2px;
@@ -1082,7 +1082,7 @@ Components
 
 /* Feature 2*/
 .fh5co-feature-2 {
-
+	
 	.fh5co-feature-item {
 		margin-bottom: 30px;
 	}
@@ -1120,9 +1120,9 @@ Components
 
 /* Feature 3 */
 .fh5co-feature-3 {
-
+	
 	.fh5co-feature-item {
-		margin-bottom: 20px;
+		margin-bottom: 20px;	
 		@media screen and (max-width: $screen-sm) {
 			display: block;
 		}
@@ -1138,7 +1138,7 @@ Components
 			font-size: 30px;
 			color: $brand-primary;
 		}
-
+		
 	}
 	.fh5co-feature-blurb {
 		float: right;
@@ -1234,7 +1234,7 @@ Components
 	&:hover {
 		opacity: .7;
 	}
-}
+} 
 
 // Call to Action
 .fh5co-call-to-action {
@@ -1268,7 +1268,7 @@ Components
 			line-height: 62px;
 			color: $brand-white;
 			width: 100%;
-
+			
 		}
 	}
 
@@ -1307,10 +1307,10 @@ Components
 					@include themify();
 					color: $brand-darker!important;
 					position: absolute;
-					content: "\e61a";
+					content: "\e61a";	
 					right: 15px;
 					top: 16px;
-				}
+				}	
 			}
 		}
 	}
@@ -1354,7 +1354,7 @@ Components
 
 img {
 	&.fh5co-align-right {
-		float:right;
+		float:right; 
 		margin:0 0 .5em 1em;
 		@media screen and (max-width: $screen-xs) {
 			width: 100%;

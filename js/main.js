@@ -111,7 +111,6 @@
 		    responsiveClass: true,
 		    nav: true,
 		    dots: true,
-				autoplay: true,
 		    smartSpeed: 500,
 		    navText: [
 		      "<i class='ti-arrow-left owl-direction'></i>",
@@ -150,30 +149,7 @@
 		    return false;
 		});
 	}
-	//Smooth scroll about
-	$('#aboutTop').click(function(event){
-		$('html, body').animate({
-			scrollTop: 0
-		}, 500);
-	});
-	//Smooth scroll about
-	$('#aboutMenu').click(function(event){
-		$('html, body').animate({
-			scrollTop: 1000
-		}, 500);
-	});
-	//Smooth scroll about
-	$('#newsMenu').click(function(event){
-		$('html, body').animate({
-			scrollTop: 2000
-		}, 500);
-	})
-	//Smooth scroll about
-	$('#contactMenu').click(function(event){
-		$('html, body').animate({
-			scrollTop: 2800
-		}, 500);
-	});
+
 	 //Smooth scroll Contact
 	 $('.fh5co-gocontact').click(function(event){
 
@@ -185,17 +161,6 @@
 	 		return false;
 	 });
 
-/* 	var scrollAbout = function(){
- 		$('#about').click(function(event){
- 			$('html, body').animate({
- 				scrollTop: 200
- 			}, 500);
- 			event.preventDefault();
- 			return false;
- 	}
-};*/
-
-
 	$(function(){
 		burgerMenu();
 		menuWrapScroll();
@@ -204,7 +169,6 @@
 		magnifPopup();
 		owlCrouselFeatureSlide();
 		sScrollTop();
-		scrollAbout();
 	});
 
 
