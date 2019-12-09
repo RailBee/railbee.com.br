@@ -2879,7 +2879,6 @@ output {
   height: 34px;
   padding: 6px 12px;
   font-size: 14px;
-  font-family: "Arial";
   line-height: 1.42857;
   color: #555555;
   background-color: #fff;
@@ -3280,7 +3279,6 @@ select[multiple].form-group-lg .form-control {
     display: inline-block;
     width: auto;
     vertical-align: middle;
-    font: Arial;
   }
   .form-inline .form-control-static {
     display: inline-block;
@@ -4345,9 +4343,6 @@ tbody.collapse.in {
 .navbar-fixed-top .navbar-collapse,
 .navbar-fixed-bottom .navbar-collapse {
   max-height: 340px;
-  margin-left: 700px;
-  margin-right: 250px;
-  text-align: right;
 }
 @media (max-device-width: 480px) and (orientation: landscape) {
   .navbar-fixed-top .navbar-collapse,
@@ -4410,7 +4405,7 @@ tbody.collapse.in {
 
 .navbar-brand {
   float: left;
-  padding: 10px 10px;
+  padding: 15px 15px;
   font-size: 18px;
   line-height: 20px;
   height: 50px;
