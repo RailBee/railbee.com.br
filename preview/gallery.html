@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="favicon.png" sizes="32x32" type="image/png"/>    
+    <title>RailBee</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container header-container">
+            <div class="logo">RailBee</div>
+            <div class="hamburger">☰</div>
+            <ul class="nav-menu">
+                <li><a href="index.html">Início</a></li>
+                <li><a href="gallery.html">Galeria</a></li>
+                <li><a href="team.html">Equipe</a></li>
+                <li><a href="publications.html">Produções Acadêmicas</a></li>
+                <li><a href="awards.html">Premiações</a></li>
+                <li><a href="contact.html">Contato</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <!-- Gallery Section -->
+    <section id="gallery" class="section gallery">
+        <div class="container">
+            <div class="section-title">
+                <h2>Galeria de Fotos</h2>
+                <div></div>
+            </div>
+            <div class="gallery-filters">
+                <div class="gallery-filter active" data-filter="all">Todas</div>
+                <div class="gallery-filter" data-filter="events">Eventos</div>
+                <div class="gallery-filter" data-filter="lab">Laboratório</div>
+                <div class="gallery-filter" data-filter="team">Equipe</div>
+            </div>
+            <div class="gallery-grid" id="gallery-container">
+                <!-- Images will be loaded here by JavaScript -->
+            </div>
+            <div class="load-more">
+                <button id="load-more-btn" class="btn">Carregar Mais Fotos</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Modal for Gallery -->
+    <div class="modal" id="image-modal">
+        <span class="modal-close">&times;</span>
+        <img class="modal-content" id="modal-image">
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>RailBee</h3>
+                    <p>Grupo de pesquisa dedicado ao avanço da telemetria e tecnologias relacionadas.</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Links Rápidos</h3>
+                    <ul>
+                        <li><a href="#home">Início</a></li>
+                        <li><a href="#about">Sobre</a></li>
+                        <li><a href="#research">Pesquisas</a></li>
+                        <li><a href="#gallery">Galeria</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Conecte-se</h3>
+                    <div class="social-links">
+                        <a href="#">📱</a>
+                        <a href="#">📷</a>
+                        <a href="#">👔</a>
+                        <a href="#">📺</a>
+                    </div>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2025 Grupo de Pesquisa RaiBee. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/gallery.js"></script>
+    <script>       
+        const galleryContainer = document.getElementById('gallery-container');
+        const loadMoreBtn = document.getElementById('load-more-btn');
+        const filters = document.querySelectorAll('.gallery-filter');
+        const modal = document.getElementById('image-modal');
+        const modalImg = document.getElementById('modal-image');
+        const modalClose = document.querySelector('.modal-close');
+        let currentFilter = 'all';
+        let visibleImages = 8;
+        galleryImages = [
+            { src: 'http://127.0.0.1:5500/assets/images/gallery/gallery_01.jpeg', category: 'events' },
+            { src: 'http://127.0.0.1:5500/assets/images/gallery/gallery_02.jpeg', category: 'events' },
+            { src: 'http://127.0.0.1:5500/assets/images/gallery/gallery_03.jpeg', category: 'events' },
+            { src: 'http://127.0.0.1:5500/assets/images/gallery/gallery_04.jpeg', category: 'events' },
+            { src: 'http://127.0.0.1:5500/assets/images/gallery/gallery_05.jpeg', category: 'lab' },
+            { src: 'http://127.0.0.1:5500/assets/images/gallery/gallery_06.jpeg', category: 'lab' },
+            { src: 'http://127.0.0.1:5500/assets/images/gallery/gallery_07.jpeg', category: 'lab' },
+            { src: 'http://127.0.0.1:5500/assets/images/gallery/gallery_08.jpeg', category: 'team' },
+            { src: 'http://127.0.0.1:5500/assets/images/gallery/gallery_09.jpeg', category: 'team' },
+            { src: 'http://127.0.0.1:5500/assets/images/gallery/gallery_10.jpeg', category: 'team' },
+            { src: 'http://127.0.0.1:5500/assets/images/gallery/gallery_11.jpeg', category: 'events' },
+        ];               
+        configureModal(modal, modalImg, modalClose);
+        configureFilters(filters, currentFilter, visibleImages);
+        configureLoadMore(galleryContainer, loadMoreBtn, currentFilter, visibleImages);
+        displayImages(galleryContainer);
+    </script>
+</body>
+</html>

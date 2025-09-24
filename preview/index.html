@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="favicon.png" sizes="32x32" type="image/png"/>    
+    <title>RailBee</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link media="all" rel="stylesheet" href="assets/css/timeline.css" />
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container header-container">
+            <div class="logo">
+                <img src="favicon.png" alt="">
+                RailBee
+            </div>
+            <div class="hamburger">☰</div>
+            <ul class="nav-menu">
+                <li><a href="index.html">Início</a></li>
+                <li><a href="gallery.html">Galeria</a></li>
+                <li><a href="team.html">Equipe</a></li>
+                <li><a href="publications.html">Produções Acadêmicas</a></li>
+                <li><a href="awards.html">Premiações</a></li>
+                <li><a href="contact.html">Contato</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="container">
+            <h1>Grupo de Pesquisa RailBee</h1>
+            <p>Desenvolvendo soluções inovadoras em telemetria através de ensino, pesquisa, extensão, inovação tecnológica e colaborações acadêmicas</p>
+            <a href="#about" class="btn">Saiba Mais</a>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="section">
+        <div class="container">
+            <div class="section-title">
+                <h2>Sobre o Grupo</h2>
+                <div></div>
+            </div>
+            <div class="about-content">
+                <div>
+                    <p>Há mais de 12 anos, o Grupo RailBee® vem trabalhando no desenvolvimento de um sistema telemétrico <b>autônomo e dinâmico</b> para monitorar estrategicamente os trens urbanos do Metrô do Recife. A principal finalidade desse sistema é coletar informações desses veículos nas vias permanentes, com o objetivo de melhorar a qualidade do serviço oferecido pela CBTU - Recife aos usuários.</p>
+                    <p>O sistema é composto por <a href="https://www.newtoncbraga.com.br/index.php/52-artigos-tecnicos/artigos-diversos/11056-o-que-e-uma-rede-de-sensores-sem-fio-tel175.html">redes de sensores sem fio</a>, <a href="https://embarcados.com.br/o-que-sao-sistemas-embarcados/">sistemas embarcados</a> e utiliza o protocolo de padrão internacional <a href="https://embarcados.com.br/padrao-ieee-802-15-4/">ZigBee/IEEE 802.15.4</a>. O RailBee® utiliza quatro subsistemas que trabalham em conjunto e em tempo real para coletar e transmitir informações, como corrente, tensão, velocidade, frenagem, pressão nas bolsas de ar, entre outros dados relevantes.</p>
+                    <p>O grupo de pesquisa surgiu a partir da tese de doutorado do Professor Doutor Rômulo César Carvalho de Araújo em 2009. Desde então, a equipe tem se dedicado a expandir sua tecnologia para monitorar outros sistemas e dispositivos, como placas solares, aerogeradores, qualidade do ar, conversores de energia das ondas e veículos rodoviários.</p>
+                    <p>Com essa expansão, o Grupo RailBee® busca contribuir para a criação de um ambiente mais sustentável e eficiente, oferecendo soluções tecnológicas para o monitoramento e controle de diversos sistemas e dispositivos. Dessa forma, espera-se melhorar a qualidade de vida das pessoas e o uso dos recursos naturais, <b>reduzindo o impacto ambiental</b> e promovendo o <b>desenvolvimento sustentável</b>.</p>
+                    <!-- <p>O Grupo de Pesquisa RailBee atua há mais de 12 anos no desenvolvimento de projetos inovadores na área de telemetria, sensoriamento remoto e aquisição de dados.</p>
+                    <p>Nossa equipe multidisciplinar é composta por pesquisadores, professores, estudantes e egressos que continuam colaborando com as atividades do grupo.</p>
+                    <p>Atuamos em parceria com empresas e instituições nacionais e internacionais, desenvolvendo pesquisas de ponta que resultam em artigos científicos, patentes, registros de software e soluções tecnológicas.</p> -->
+                </div>
+                <div>
+                    <img src="assets/images/logomark.svg" class="railbee_logo" alt="Laboratório de pesquisa">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Research Areas -->
+    <section id="research" class="section">
+        <div class="container">
+            <div class="section-title">
+                <h2>Áreas de Pesquisa</h2>
+                <div></div>
+            </div>
+            <div class="research-grid">
+                <div class="research-card">
+                    <h3>Telemetria Veicular</h3>
+                    <p>Desenvolvimento de sistemas de aquisição e transmissão de dados para monitoramento de veículos em tempo real.</p>
+                </div>
+                <div class="research-card">
+                    <h3>Sensores Remotos</h3>
+                    <p>Pesquisa e desenvolvimento de sensores para aplicações em monitoramento ambiental e industrial.</p>
+                </div>
+                <div class="research-card">
+                    <h3>Aquisição de Dados</h3>
+                    <p>Sistemas embarcados para coleta e processamento de dados em ambientes diversos.</p>
+                </div>
+                <div class="research-card">
+                    <h3>Comunicação de Dados</h3>
+                    <p>Protocolos e sistemas de comunicação para transmissão eficiente de dados telemétricos.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="gallery" class="section gallery">
+        <div class="container">
+            <div class="section-title">
+                <h2>Galeria de Fotos</h2>
+                <div></div>
+            </div>
+            <div class="gallery-grid" id="gallery-container">
+            </div>
+            <div class="more-container">
+                <a href="gallery.html" class="btn">Ver Mais</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Modal for Gallery -->
+    <div class="modal" id="image-modal">
+        <span class="modal-close">&times;</span>
+        <img class="modal-content" id="modal-image">
+    </div>
+
+    <!-- Team Section -->
+    <section id="team" class="section">
+        <div class="container">
+            <div class="section-title">
+                <h2>Equipe Atual</h2>
+                <div></div>
+            </div>
+            <div id="team-atual" class="team-grid">
+            </div>            
+            <div class="more-container">
+                <a href="team.html" class="btn">Ver Mais</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Publications Section -->
+    <section id="publications" class="section">
+        <div class="container">
+            <div class="section-title">
+                <h2>Útimas Publicações</h2>
+                <div></div>
+            </div>
+            <div class="timeline">
+                <div class="timeline__container" id="timeline-publication-container">
+                </div>
+            </div>
+            <div class="more-container">
+                <a href="publications.html" class="btn">Ver Mais</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Award Section -->
+    <section id="publications" class="section">
+        <div class="container">
+            <div class="section-title">
+                <h2>Útimas Premiações</h2>
+                <div></div>
+            </div>
+            <div class="timeline">
+                <div class="timeline__container" id="timeline-award-container">
+                </div>
+            </div>
+            <div class="more-container">
+                <a href="awards.html" class="btn">Ver Mais</a>
+            </div>
+        </div>
+    </section>    
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>RailBee</h3>
+                    <p>Grupo de pesquisa dedicado ao avanço da telemetria e tecnologias relacionadas.</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Links Rápidos</h3>
+                    <ul>
+                        <li><a href="#home">Início</a></li>
+                        <li><a href="#about">Sobre</a></li>
+                        <li><a href="#research">Pesquisas</a></li>
+                        <li><a href="#gallery">Galeria</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Conecte-se</h3>
+                    <div class="social-links">
+                        <a href="#">📱</a>
+                        <a href="#">📷</a>
+                        <a href="#">👔</a>
+                        <a href="#">📺</a>
+                    </div>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2025 Grupo de Pesquisa RaiBee. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/gallery.js"></script>
+    <script src="assets/js/timeline.js"></script>
+    <script src="assets/js/team.js"></script>
+    <script>
+        // Gallery functionality
+        const galleryContainer = document.getElementById('gallery-container');
+        const modal = document.getElementById('image-modal');
+        const modalImg = document.getElementById('modal-image');
+        const modalClose = document.querySelector('.modal-close');
+        let currentFilter = 'all';
+        let visibleImages = 8;
+        galleryImages = [
+            { src: 'http://127.0.0.1:5500/assets/images/gallery/gallery_01.jpeg', category: 'events' },
+            { src: 'http://127.0.0.1:5500/assets/images/gallery/gallery_02.jpeg', category: 'events' },
+            { src: 'http://127.0.0.1:5500/assets/images/gallery/gallery_03.jpeg', category: 'events' },
+            { src: 'http://127.0.0.1:5500/assets/images/gallery/gallery_04.jpeg', category: 'events' },
+        ];        
+        configureModal(modal, modalImg, modalClose);
+        displayImages(galleryContainer);
+
+        // Team Functionality
+        const teamAtualContainer = document.getElementById('team-atual');
+        const atual = [
+            {name:"Prof. Dr. Rômulo Araújo", role:"Coordenador", image:"assets/images/team/romulo.png", orcid:"https://orcid.org/0000-0001-9355-3322", lates: "http://lattes.cnpq.br/7079843148914551", github: "https://github.com/RomuloCCAraujo", email: "romuloaraujo@recife.ifpe.edu.br", linkedin:""},
+            {name:"Prof. Dr. Henrique Santos", role:"Coordenador", image:"assets/images/team/henrique.png", orcid:"https://orcid.org/0000-0002-9544-7774", lates: "http://lattes.cnpq.br/1664284153985134", github: "https://github.com/hctsantos", email: "henrique.santos@recife.ifpe.edu.br", linkedin:""},
+            {name: "Edson Carvalho",role: "Estudante",image: "assets/images/team/edson.png",orcid: "https://orcid.org/0009-0007-1712-6434",lates: "http://lattes.cnpq.br/5416892205014072",github: "https://github.com/carvalhoedsonn",email: "mailto:ejscf@discente.ifpe.edu.br",linkedin: "https://www.linkedin.com/in/edson-carvalho-7831a425a/"},
+            {name: "Mariana Santos",role: "Estudante",image: "assets/images/team/mariana.png",orcid: "",lates: "http://lattes.cnpq.br/1675535561713236",github: "https://github.com/Mariana-RDS",email: "mailto:mrds@discente.ifpe.edu.br",linkedin: ""}
+        ];
+        displayTeam(teamAtualContainer, atual);
+
+        // Timeline Functionality
+        const timelinePublicationsContainer = document.getElementById('timeline-publication-container');
+        const timelineAwardsContainer = document.getElementById('timeline-award-container');
+        const publications = [
+            {
+                year: 2024,
+                pubs: [
+                    {category: "Artigo", title: "Aplicação do Módulo de Monitoramento da Qualidade do Ar no Sistema Telemétrico para Monitoramento Ambiental nos Sistemas de Transportes Públicos", linkTitle: "2024 - Studies in Engineering and Exact Sciences", link: "https://ojs.studiespublicacoes.com.br/ojs/index.php/sees/article/view/4994"},
+                    {category: "Artigo", title: "Desenvolvimento de um Sistema Telemétrico para Conversores de Energia das Ondas de Baixa Potência Utilizando o Protocolo Railbee", link: "https://ojs.revistacontemporanea.com/ojs/index.php/home/article/view/4560", linkTitle: "2024 - Revista Contemporânea"},
+                    {category: "Patente", title: "Sistema Telemétrico Dinâmico Autônomo Modular para Monitoramento, Controle e Automação", link: "#", linkTitle:"2024 - INPI"},
+                ]
+            }, 
+        ];      
+        const awards = [
+            {
+                year: 2022,
+                pubs: [
+                    {category: "Mostra Tecnológica", title: "Primeiro Lugar  - XIII Congresso Norte Nordeste de Pesquisa e Inovação (CONNEPI): TelemetricSys - Sistema Telemétrico Dinâmico Autônomo e Suas Aplicações", link: "#", linkTitle: "2022 - Registro INPI"},
+                ]
+            }, 
+        ];      
+        displayTimeline(timelinePublicationsContainer, publications);        
+        displayTimeline(timelineAwardsContainer, awards);        
+        
+    </script>
+</body>
+</html>

@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grupo de Pesquisa em Telemetria</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container header-container">
+            <div class="logo">RailBee</div>
+            <div class="hamburger">☰</div>
+            <ul class="nav-menu">
+                <li><a href="index.html">Início</a></li>
+                <!-- <li><a href="#about">Sobre</a></li> -->
+                <!-- <li><a href="#research">Pesquisas</a></li> -->
+                <li><a href="gallery.html">Galeria</a></li>
+                <li><a href="team.html">Equipe</a></li>
+                <!-- <li><a href="publications.html">Produções Acadêmicas</a></li> -->
+                <li><a href="timeline.html">Timeline</a></li>
+                <li><a href="index.html#contact">Contato</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <!-- Publications Section -->
+    <section id="publications" class="section">
+        <div class="container">
+            <div class="section-title">
+                <h2>Publicações</h2>
+                <div></div>
+            </div>
+            <div class="publication-list">
+                <div class="publication-item">
+                    <h3>Artigo: Aplicação do Módulo de Monitoramento da Qualidade do Ar no Sistema Telemétrico para Monitoramento Ambiental nos Sistemas de Transportes Públicos</h3>
+                    <p><a href="https://ojs.studiespublicacoes.com.br/ojs/index.php/sees/article/view/4994" target="_blank">2024 - Studies in Engineering and Exact Sciences</a></p>
+                </div>
+                <div class="publication-item">
+                    <h3>Artigo: Desenvolvimento de um Sistema Telemétrico para Conversores de Energia das Ondas de Baixa Potência Utilizando o Protocolo Railbee</h3>
+                    <p><a href="https://ojs.revistacontemporanea.com/ojs/index.php/home/article/view/4560" target="_blank">2024 - Revista Contemporânea</a></p>
+                </div>
+                <div class="publication-item">
+                    <h3>Patente: Sistema Telemétrico Dinâmico Autônomo Modular para Monitoramento, Controle e Automação</h3>
+                    <p>2024 - INPI</p>
+                </div>
+                <div class="publication-item">
+                    <h3>Artigo: A New Approach for Air Quality Monitoring: A Case Study of Recife, Brazil.</h3>
+                    <p>2022 - Registro INPI</p>
+                </div>
+                <div class="publication-item">
+                    <h3>Análise Comparativa de Protocolos de Comunicação para IoT</h3>
+                    <p>2021 - Conferência Internacional de Telecomunicações</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>RailBee</h3>
+                    <p>Grupo de pesquisa dedicado ao avanço da telemetria e tecnologias relacionadas.</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Links Rápidos</h3>
+                    <ul>
+                        <li><a href="#home">Início</a></li>
+                        <li><a href="#about">Sobre</a></li>
+                        <li><a href="#research">Pesquisas</a></li>
+                        <li><a href="#gallery">Galeria</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Conecte-se</h3>
+                    <div class="social-links">
+                        <a href="#">📱</a>
+                        <a href="#">📷</a>
+                        <a href="#">👔</a>
+                        <a href="#">📺</a>
+                    </div>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2025 Grupo de Pesquisa RaiBee. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile Menu Toggle
+        const hamburger = document.querySelector('.hamburger');
+        const navMenu = document.querySelector('.nav-menu');
+        
+        hamburger.addEventListener('click', () => {
+            navMenu.classList.toggle('active');
+        });
+        
+        // Close menu when clicking on a link
+        document.querySelectorAll('.nav-menu a').forEach(link => {
+            link.addEventListener('click', () => {
+                navMenu.classList.remove('active');
+            });
+        });
+        
+        // Gallery functionality
+        const galleryContainer = document.getElementById('gallery-container');
+        const loadMoreBtn = document.getElementById('load-more-btn');
+        const filters = document.querySelectorAll('.gallery-filter');
+        const modal = document.getElementById('image-modal');
+        const modalImg = document.getElementById('modal-image');
+        const modalClose = document.querySelector('.modal-close');
+        
+        // Sample images data (in a real scenario, this would come from a server)
+        const allImages = [
+            { src: 'https://source.unsplash.com/random/600x400/?conference', category: 'events' },
+            { src: 'https://source.unsplash.com/random/600x400/?workshop', category: 'events' },
+            { src: 'https://source.unsplash.com/random/600x400/?electronics', category: 'lab' },
+            { src: 'https://source.unsplash.com/random/600x400/?circuit', category: 'lab' },
+            { src: 'https://source.unsplash.com/random/600x400/?team', category: 'team' },
+            { src: 'https://source.unsplash.com/random/600x400/?meeting', category: 'team' },
+            { src: 'https://source.unsplash.com/random/600x400/?presentation', category: 'events' },
+            { src: 'https://source.unsplash.com/random/600x400/?soldering', category: 'lab' },
+            { src: 'https://source.unsplash.com/random/600x400/?graduation', category: 'events' },
+            { src: 'https://source.unsplash.com/random/600x400/?computer', category: 'lab' },
+            { src: 'https://source.unsplash.com/random/600x400/?research', category: 'team' },
+            { src: 'https://source.unsplash.com/random/600x400/?data', category: 'lab' },
+            // More images would be loaded from server as needed
+        ];
+        
+        let currentFilter = 'all';
+        let visibleImages = 8; // Initial number of images to show
+        
+        // Function to display images
+        function displayImages(filter = 'all', count = visibleImages) {
+            galleryContainer.innerHTML = '';
+            const filteredImages = filter === 'all' 
+                ? allImages 
+                : allImages.filter(img => img.category === filter);
+            
+            const imagesToShow = filteredImages.slice(0, count);
+            
+            imagesToShow.forEach(image => {
+                const galleryItem = document.createElement('div');
+                galleryItem.className = 'gallery-item';
+                galleryItem.dataset.category = image.category;
+                galleryItem.innerHTML = `<img src="${image.src}" alt="Gallery image">`;
+                galleryContainer.appendChild(galleryItem);
+                
+                // Add click event to open modal
+                galleryItem.addEventListener('click', () => {
+                    modal.style.display = 'flex';
+                    modalImg.src = image.src;
+                });
+            });
+            
+            // Show/hide load more button
+            if (count >= filteredImages.length) {
+                loadMoreBtn.style.display = 'none';
+            } else {
+                loadMoreBtn.style.display = 'block';
+            }
+        }
+        
+        // Initial display
+        displayImages();
+        
+        // Filter images
+        filters.forEach(filter => {
+            filter.addEventListener('click', () => {
+                filters.forEach(f => f.classList.remove('active'));
+                filter.classList.add('active');
+                currentFilter = filter.dataset.filter;
+                visibleImages = 8; // Reset visible images count when filter changes
+                displayImages(currentFilter, visibleImages);
+            });
+        });
+        
+        // Load more images
+        loadMoreBtn.addEventListener('click', () => {
+            visibleImages += 4;
+            displayImages(currentFilter, visibleImages);
+        });
+        
+        // Close modal
+        modalClose.addEventListener('click', () => {
+            modal.style.display = 'none';
+        });
+        
+        // Close modal when clicking outside the image
+        modal.addEventListener('click', (e) => {
+            if (e.target === modal) {
+                modal.style.display = 'none';
+            }
+        });
+        
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 70, // Adjust for header height
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
