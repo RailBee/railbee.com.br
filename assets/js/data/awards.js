@@ -2,13 +2,13 @@ const awards = [
     {
         year: 2022,
         pubs: [
-            {category: "Mostra Tecnológica", title: "Primeiro Lugar  - XIII Congresso Norte Nordeste de Pesquisa e Inovação (CONNEPI): TelemetricSys - Sistema Telemétrico Dinâmico Autônomo e Suas Aplicações", link: "#", linkTitle: "2022 - Registro INPI"},
+            {category: "Mostra Tecnológica", title: "Primeiro Lugar  - XIII Congresso Norte Nordeste de Pesquisa e Inovação (CONNEPI): TelemetricSys - Sistema Telemétrico Dinâmico Autônomo e Suas Aplicações", link: "#", linkTitle: "Instituto Federal de Rondônia (IFRO)"},
         ]
     }, 
     {
         year: 2021,
         pubs: [
-            {category: "Congresso", title: "Primeiro Lugar - Categoria Tecnologia, Região Nordeste - Prêmio PI nas Escolas", link: "#", linkTitle: "INPI"},
+            {category: "Concurso", title: "Primeiro Lugar - Categoria Tecnologia, Região Nordeste - Prêmio PI nas Escolas", link: "#", linkTitle: "INPI"},
         ]
     }, 
     {

@@ -19,9 +19,9 @@ const publications = [
     {
         year: 2024,
         pubs: [
-            {category: "Artigo", title: "Aplicação do Módulo de Monitoramento da Qualidade do Ar no Sistema Telemétrico para Monitoramento Ambiental nos Sistemas de Transportes Públicos", linkTitle: "2024 - Studies in Engineering and Exact Sciences", link: "https://ojs.studiespublicacoes.com.br/ojs/index.php/sees/article/view/4994"},
-            {category: "Artigo", title: "Desenvolvimento de um Sistema Telemétrico para Conversores de Energia das Ondas de Baixa Potência Utilizando o Protocolo Railbee", link: "https://ojs.revistacontemporanea.com/ojs/index.php/home/article/view/4560", linkTitle: "2024 - Revista Contemporânea"},
-            {category: "Patente", title: "Sistema Telemétrico Dinâmico Autônomo Modular para Monitoramento, Controle e Automação", link: "#", linkTitle:"2024 - INPI"},
+            {category: "Artigo", title: "Aplicação do Módulo de Monitoramento da Qualidade do Ar no Sistema Telemétrico para Monitoramento Ambiental nos Sistemas de Transportes Públicos", linkTitle: "Studies in Engineering and Exact Sciences", link: "https://ojs.studiespublicacoes.com.br/ojs/index.php/sees/article/view/4994"},
+            {category: "Artigo", title: "Desenvolvimento de um Sistema Telemétrico para Conversores de Energia das Ondas de Baixa Potência Utilizando o Protocolo Railbee", link: "https://ojs.revistacontemporanea.com/ojs/index.php/home/article/view/4560", linkTitle: "Revista Contemporânea"},
+            {category: "Patente", title: "Sistema Telemétrico Dinâmico Autônomo Modular para Monitoramento, Controle e Automação", link: "#", linkTitle:"INPI"},
         ]
     }, 
 ];      
@@ -31,7 +31,7 @@ const awards = [
     {
         year: 2022,
         pubs: [
-            {category: "Mostra Tecnológica", title: "Primeiro Lugar  - XIII Congresso Norte Nordeste de Pesquisa e Inovação (CONNEPI): TelemetricSys - Sistema Telemétrico Dinâmico Autônomo e Suas Aplicações", link: "#", linkTitle: "2022 - Registro INPI"},
+            {category: "Mostra Tecnológica", title: "Primeiro Lugar  - XIII Congresso Norte Nordeste de Pesquisa e Inovação (CONNEPI): TelemetricSys - Sistema Telemétrico Dinâmico Autônomo e Suas Aplicações", link: "#", linkTitle: "Registro INPI"},
         ]
     }, 
 ];      
