@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema de Telemetria para Veículos Elétricos | Telemetria Research</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <style>       
+        /* Breadcrumb */
+        .breadcrumb {
+            padding: 1rem 0;
+            background-color: #f0f0f0;
+            margin-bottom: 2rem;
+        }
+        
+        .breadcrumb a {
+            color: var(--secondary-color);
+        }
+        
+        .breadcrumb span {
+            color: #777;
+        }
+        
+        /* Project Header */
+        .project-header {
+            background: linear-gradient(135deg, var(--primary-color), #1a2530);
+            color: white;
+            padding: 3rem 0;
+            text-align: center;
+            margin-bottom: 3rem;
+            border-radius: 0 0 10px 10px;
+        }
+        
+        .project-title {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+        
+        .project-subtitle {
+            font-size: 1.2rem;
+            opacity: 0.9;
+            max-width: 800px;
+            margin: 0 auto 2rem;
+        }
+        
+        .project-meta {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+        
+        .meta-item {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        .status-badge {
+            display: inline-block;
+            padding: 0.3rem 1rem;
+            background-color: #2ecc71;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: bold;
+        }
+        
+        /* Content Sections */
+        .content-section {
+            background: white;
+            padding: 2.5rem;
+            margin-bottom: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+        }
+        
+        .section-title {
+            color: var(--primary-color);
+            border-left: 4px solid var(--secondary-color);
+            padding-left: 1rem;
+            margin-bottom: 1.5rem;
+            font-size: 1.8rem;
+        }
+        
+        .section-content {
+            line-height: 1.7;
+        }
+        
+        .section-content p {
+            margin-bottom: 1.2rem;
+        }
+        
+        .section-content h3 {
+            color: var(--primary-color);
+            margin: 1.5rem 0 0.8rem;
+        }
+        
+        /* Figures and Charts */
+        .figure-container {
+            margin: 2rem 0;
+            text-align: center;
+        }
+        
+        .figure {
+            max-width: 100%;
+            border-radius: 5px;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+        }
+        
+        .figure-caption {
+            margin-top: 0.5rem;
+            font-style: italic;
+            color: #666;
+            font-size: 0.9rem;
+        }
+        
+        .chart-container {
+            background: #f8f9fa;
+            padding: 1.5rem;
+            border-radius: 5px;
+            margin: 1.5rem 0;
+        }
+        
+        .chart {
+            height: 300px;
+            background: linear-gradient(90deg, #3498db, #2ecc71);
+            border-radius: 5px;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .chart-bar {
+            position: absolute;
+            bottom: 0;
+            width: 60px;
+            background: var(--secondary-color);
+            border-radius: 3px 3px 0 0;
+        }
+        
+        .chart-labels {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 1rem;
+        }
+        
+        /* Team Section */
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 1.5rem;
+            margin-top: 1.5rem;
+        }
+        
+        .team-member {
+            text-align: center;
+            padding: 1rem;
+            border: 1px solid #eee;
+            border-radius: 5px;
+            transition: transform 0.3s;
+        }
+        
+        .team-member:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        .team-member img {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 0.8rem;
+        }
+        
+        /* References */
+        .reference-list {
+            list-style-type: decimal;
+        }
+        
+        .reference-item {
+            margin-bottom: 1rem;
+            padding-left: 0.5rem;
+        }
+        
+        /* Project Navigation */
+        .project-nav {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 3rem;
+            padding-top: 2rem;
+            border-top: 1px solid #eee;
+        }
+        
+        .nav-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.8rem 1.5rem;
+            background: var(--secondary-color);
+            color: white;
+            border-radius: 5px;
+            transition: background 0.3s;
+        }
+        
+        .nav-btn:hover {
+            background: #2980b9;
+        }
+        
+        
+        /* Responsive */
+        @media (max-width: 768px) {           
+            .project-title {
+                font-size: 2rem;
+            }
+            
+            .project-subtitle {
+                font-size: 1rem;
+            }
+            
+            .project-meta {
+                flex-direction: column;
+                gap: 1rem;
+            }
+            
+            .content-section {
+                padding: 1.5rem;
+            }
+            
+            .section-title {
+                font-size: 1.5rem;
+            }
+            
+            .team-grid {
+                grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+            }
+            
+            .project-nav {
+                flex-direction: column;
+                gap: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <div id="header-container"></div>
+
+    <!-- Breadcrumb -->
+    <!-- <div class="breadcrumb">
+        <div class="container">
+            <a href="index.html">Início</a> > <a href="projetos.html">Projetos</a> > <span>ModularSys</span>
+        </div>
+    </div> -->
+
+    <!-- Project Header -->
+    <section class="project-header">
+        <div class="container">
+            <h1 class="project-title">ModularSys</h1>
+            <p class="project-subtitle">
+                Sistema Telemétrico Dinâmico Autônomo Modular para Monitoramento, Controle e Automação Em Apoio a Sustentabilidade de Ecossistemas Marinhos e Costeiros
+            </p>
+            <span class="status-badge">Em Andamento</span>
+            
+            <div class="project-meta">
+                <div class="meta-item">
+                    <span>📅</span>
+                    <span>Início: Jan/2022 | Previsão: Dez/2024</span>
+                </div>
+                <div class="meta-item">
+                    <span>💰</span>
+                    <span>Financiamento: FAPESP</span>
+                </div>
+                <div class="meta-item">
+                    <span>👥</span>
+                    <span>Coordenador: Prof. Dr. Carlos Silva</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <div class="container">
+        <!-- Introdução -->
+        <section class="content-section">
+            <h2 class="section-title">Introdução</h2>
+            <div class="section-content">
+                <p>A qualidade do ar, a eficiência do transporte público e a gestão da energia são desafios críticos para cidades inteligentes e sustentáveis. A ausência de monitoramento em tempo real compromete a tomada de decisões e dificulta a implementação de soluções eficazes.</p>
+                <p>O ModularSys é um sistema telemétrico dinâmico, autônomo e modular que permite o monitoramento e automação desses processos, promovendo maior eficiência urbana. Como desenvolver uma tecnologia baixo custo, escalável e autônoma capaz de monitorar em tempo real o meio ambiente, o transporte público e a gestão de energia, promovendo cidades mais eficientes e sustentáveis?</p>
+                <p>A implementação do ModularSys possibilitará a coleta e análise precisa de dados urbanos, permitindo a automação de processos e a otimização da gestão de recursos, contribuindo para cidades mais conectadas e sustentáveis.</p>
+
+                <div class="figure-container">
+                    <img src="assets/images/projects/modularsys/applications.png" alt="Aplicações do ModularSys" class="figure">
+                    <p class="figure-caption">Figura 1: Aplicações do ModularSys</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Materiais e Métodos -->
+        <section class="content-section">
+            <h2 class="section-title">Materiais e Métodos</h2>
+            <div class="section-content">
+                <p>O ModularSys é um sistema telemétrico modular que utiliza Redes de Sensores Sem Fio, Ethernet e Fibra Óptica para comunicação. Ele opera com Wi-Fi, LoRa, ZigBee, Satélite, Bluetooth e GSM (Global System for Mobile Communications), escolhendo o protocolo conforme a necessidade da aplicação. As Estações Módulo (EM) transmitem dados para o Broker MQTT VerneMQ, enquanto aquelas sem conexão utilizam Estações Base ou Roteadoras e em caso de falha, os dados são armazenados localmente. O Broker MQTT VerneMQ atua como um orquestrador de tráfego de dados, recebendo informações das EMs e distribuindo-as aos demais módulos do sistema. </p>
+                <p>O Monitor VerneMQ processa e armazena as informações em um Banco de Dados de Séries Temporais, permitindo análises eficientes. A API se conecta ao Cliente VueJS, possibilitando monitoramento em tempo real pelo Painel Grafana Dashboard, com gráficos interativos para identificação de padrões.</p>
+                <div class="figure-container">
+                    <img src="assets/images/projects/modularsys/architecture.png" alt="Diagrama da arquitetura do sistema" class="figure">
+                    <p class="figure-caption">Figura 2: Arquitetura do ModularSys</p>
+                </div>
+                
+                <h3>Metodologia de Desenvolvimento</h3>
+                <p>Adotamos uma abordagem iterativa baseada no framework Scrum, com ciclos de desenvolvimento de 4 semanas. A validação do sistema está sendo realizada em parceria com fabricantes de veículos elétricos, utilizando tanto ambientes controlados em laboratório quanto testes em condições reais de operação.</p>
+            </div>
+        </section>
+
+        <!-- Resultados e Discussões -->
+        <section class="content-section">
+            <h2 class="section-title">Resultados e Discussões</h2>
+            <div class="section-content">
+                <!-- <h3>Desempenho do Sistema</h3> -->
+                <p>O ModularSys foi testado por 10 horas contínuas, processando 1.070.382 registros, com uma média de 107.038 por hora, 1.784 por minuto e 30 por segundo. Essa taxa de processamento demostrou a eficiência do sistema na transmissão de grandes volumes de dados em tempo real. A estabilidade operacional foi validada com quatro repetições do experimento, resultando em uma média de 1.072.313 registros e um desvio padrão de apenas 1.600, indicando baixa variação e alta confiabilidade.</p>
+                <p>A análise estatística confirmou a previsibilidade do sistema, com um intervalo de confiança de 95%, oscilando entre 1.069.767 e 1.074.859 registros (Tabela 3). A Figura 3 mostra a variação dos dados em cada repetição, evidenciando a consistência da transmissão.</p>
+                
+                <div class="figure-container">
+                    <img src="assets/images/projects/modularsys/stats_1.png" alt="Distribuição t de Student’s e Intervalo de Confiança" class="figure">
+                    <p class="figure-caption">Tabela 1: Distribuição t de Student’s e Intervalo de Confiança</p>
+                </div>
+                
+                <div class="figure-container">
+                    <img src="assets/images/projects/modularsys/stats_2.png" alt="Intervalo de Confiança do Sistema" class="figure">
+                    <p class="figure-caption">Figura 3: Intervalo de Confiança do Sistema</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Considerações Finais -->
+        <section class="content-section">
+            <h2 class="section-title">Considerações Finais</h2>
+            <div class="section-content">
+                <p>O ModularSys é uma solução inovadora para monitoramento ambiental, transporte público e energia renovável, unindo flexibilidade, eficiência e sustentabilidade. Com alta capacidade de processamento e validação estatística confiável, o sistema demonstra impacto real na construção de cidades inteligentes e sustentáveis. Seu desenvolvimento reafirma o compromisso com tecnologia e inovação, promovendo avanços essenciais para qualidade de vida e preservação ambiental.</p>
+            </div>
+        </section>
+
+        <!-- Referências -->
+        <section class="content-section">
+            <h2 class="section-title">Referências</h2>
+            <div class="section-content">
+                <ol class="reference-list">
+                    <li class="reference-item">CBTU. Companhia Brasileira de Trens Urbanos. 2024.>
+                    <li class="reference-item">CNPq. Conselho Nacional de Desenvolvimento Científico e Tecnológico. 2024. INPI. Instituto Nacional da Propriedade Industrial. 2024.>
+                    <li class="reference-item">KIMANI, R. What are time series databases, and why do you need them? 2023. LOCKERMAN, J. Time-series compression algorithms, explained. 2020.>
+                    <li class="reference-item">ONU. Objetivos de Desenvolvimento Sustentável — As Nações Unidas no Brasil. 2024. RailBee. RailBee - Monitoramento Estratégico de Trens Urbanos. 2024.>
+                    <li class="reference-item">SALDANHA, R. Cidade de São Paulo tem ar mais poluído do mundo, aponta ranking internacional. 2024. TOTH, A. Time-series database: an explainer. 2023.>
+                </ol>
+            </div>
+        </section>
+    </div>
+
+    <!-- Footer -->
+    <div id="footer-container"></div>
+
+    <script src="assets/js/main.js"></script>
+    <script>
+        // Mobile Menu Toggle
+        const hamburger = document.querySelector('.hamburger');
+        const navMenu = document.querySelector('.nav-menu');
+        
+        hamburger.addEventListener('click', () => {
+            navMenu.classList.toggle('active');
+        });
+        
+        // Close menu when clicking on a link
+        document.querySelectorAll('.nav-menu a').forEach(link => {
+            link.addEventListener('click', () => {
+                navMenu.classList.remove('active');
+            });
+        });
+        
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 70,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+        
+        // Simple chart animation
+        document.addEventListener('DOMContentLoaded', function() {
+            const chartBars = document.querySelectorAll('.chart-bar');
+            chartBars.forEach(bar => {
+                const originalHeight = bar.style.height;
+                bar.style.height = '0%';
+                
+                setTimeout(() => {
+                    bar.style.transition = 'height 1s ease-in-out';
+                    bar.style.height = originalHeight;
+                }, 500);
+            });
+        });
+    </script>
+</body>
+</html>

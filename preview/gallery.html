@@ -9,20 +9,7 @@
 </head>
 <body>
     <!-- Header -->
-    <header>
-        <div class="container header-container">
-            <div class="logo">RailBee</div>
-            <div class="hamburger">☰</div>
-            <ul class="nav-menu">
-                <li><a href="index.html">Início</a></li>
-                <li><a href="gallery.html">Galeria</a></li>
-                <li><a href="team.html">Equipe</a></li>
-                <li><a href="publications.html">Produções Acadêmicas</a></li>
-                <li><a href="awards.html">Premiações</a></li>
-                <li><a href="contact.html">Contato</a></li>
-            </ul>
-        </div>
-    </header>
+    <div id="header-container"></div>
 
     <!-- Gallery Section -->
     <section id="gallery" class="section gallery">
@@ -87,6 +74,7 @@
 
     <script src="assets/js/main.js"></script>
     <script src="assets/js/gallery.js"></script>
+    <script src="assets/js/data/gallery.js"></script>
     <script>       
         const galleryContainer = document.getElementById('gallery-container');
         const loadMoreBtn = document.getElementById('load-more-btn');
@@ -95,22 +83,9 @@
         const modalImg = document.getElementById('modal-image');
         const modalClose = document.querySelector('.modal-close');
         let currentFilter = 'all';
-        let visibleImages = 8;
-        galleryImages = [
-            { src: 'http://127.0.0.1:5500/assets/images/gallery/gallery_01.jpeg', category: 'events' },
-            { src: 'http://127.0.0.1:5500/assets/images/gallery/gallery_02.jpeg', category: 'events' },
-            { src: 'http://127.0.0.1:5500/assets/images/gallery/gallery_03.jpeg', category: 'events' },
-            { src: 'http://127.0.0.1:5500/assets/images/gallery/gallery_04.jpeg', category: 'events' },
-            { src: 'http://127.0.0.1:5500/assets/images/gallery/gallery_05.jpeg', category: 'lab' },
-            { src: 'http://127.0.0.1:5500/assets/images/gallery/gallery_06.jpeg', category: 'lab' },
-            { src: 'http://127.0.0.1:5500/assets/images/gallery/gallery_07.jpeg', category: 'lab' },
-            { src: 'http://127.0.0.1:5500/assets/images/gallery/gallery_08.jpeg', category: 'team' },
-            { src: 'http://127.0.0.1:5500/assets/images/gallery/gallery_09.jpeg', category: 'team' },
-            { src: 'http://127.0.0.1:5500/assets/images/gallery/gallery_10.jpeg', category: 'team' },
-            { src: 'http://127.0.0.1:5500/assets/images/gallery/gallery_11.jpeg', category: 'events' },
-        ];               
+        let visibleImages = 8;             
         configureModal(modal, modalImg, modalClose);
-        configureFilters(filters, currentFilter, visibleImages);
+        configureFilters(galleryContainer, loadMoreBtn, filters, currentFilter, visibleImages);
         configureLoadMore(galleryContainer, loadMoreBtn, currentFilter, visibleImages);
         displayImages(galleryContainer);
     </script>

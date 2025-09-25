@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema de Telemetria para Veículos Elétricos | Telemetria Research</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <style>       
+        /* Breadcrumb */
+        .breadcrumb {
+            padding: 1rem 0;
+            background-color: #f0f0f0;
+            margin-bottom: 2rem;
+        }
+        
+        .breadcrumb a {
+            color: var(--secondary-color);
+        }
+        
+        .breadcrumb span {
+            color: #777;
+        }
+        
+        /* Project Header */
+        .project-header {
+            background: linear-gradient(135deg, var(--primary-color), #1a2530);
+            color: white;
+            padding: 3rem 0;
+            text-align: center;
+            margin-bottom: 3rem;
+            border-radius: 0 0 10px 10px;
+        }
+        
+        .project-title {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+        
+        .project-subtitle {
+            font-size: 1.2rem;
+            opacity: 0.9;
+            max-width: 800px;
+            margin: 0 auto 2rem;
+        }
+        
+        .project-meta {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+        
+        .meta-item {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        .status-badge {
+            display: inline-block;
+            padding: 0.3rem 1rem;
+            background-color: #2ecc71;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: bold;
+        }
+        
+        /* Content Sections */
+        .content-section {
+            background: white;
+            padding: 2.5rem;
+            margin-bottom: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+        }
+        
+        .section-title {
+            color: var(--primary-color);
+            border-left: 4px solid var(--secondary-color);
+            padding-left: 1rem;
+            margin-bottom: 1.5rem;
+            font-size: 1.8rem;
+        }
+        
+        .section-content {
+            line-height: 1.7;
+        }
+        
+        .section-content p {
+            margin-bottom: 1.2rem;
+        }
+        
+        .section-content h3 {
+            color: var(--primary-color);
+            margin: 1.5rem 0 0.8rem;
+        }
+        
+        /* Figures and Charts */
+        .figure-container {
+            margin: 2rem 0;
+            text-align: center;
+        }
+        
+        .figure {
+            max-width: 100%;
+            border-radius: 5px;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+        }
+        
+        .figure-caption {
+            margin-top: 0.5rem;
+            font-style: italic;
+            color: #666;
+            font-size: 0.9rem;
+        }
+        
+        .chart-container {
+            background: #f8f9fa;
+            padding: 1.5rem;
+            border-radius: 5px;
+            margin: 1.5rem 0;
+        }
+        
+        .chart {
+            height: 300px;
+            background: linear-gradient(90deg, #3498db, #2ecc71);
+            border-radius: 5px;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .chart-bar {
+            position: absolute;
+            bottom: 0;
+            width: 60px;
+            background: var(--secondary-color);
+            border-radius: 3px 3px 0 0;
+        }
+        
+        .chart-labels {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 1rem;
+        }
+        
+        /* Team Section */
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 1.5rem;
+            margin-top: 1.5rem;
+        }
+        
+        .team-member {
+            text-align: center;
+            padding: 1rem;
+            border: 1px solid #eee;
+            border-radius: 5px;
+            transition: transform 0.3s;
+        }
+        
+        .team-member:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        .team-member img {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 0.8rem;
+        }
+        
+        /* References */
+        .reference-list {
+            list-style-type: decimal;
+        }
+        
+        .reference-item {
+            margin-bottom: 1rem;
+            padding-left: 0.5rem;
+        }
+        
+        /* Project Navigation */
+        .project-nav {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 3rem;
+            padding-top: 2rem;
+            border-top: 1px solid #eee;
+        }
+        
+        .nav-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.8rem 1.5rem;
+            background: var(--secondary-color);
+            color: white;
+            border-radius: 5px;
+            transition: background 0.3s;
+        }
+        
+        .nav-btn:hover {
+            background: #2980b9;
+        }
+        
+        
+        /* Responsive */
+        @media (max-width: 768px) {           
+            .project-title {
+                font-size: 2rem;
+            }
+            
+            .project-subtitle {
+                font-size: 1rem;
+            }
+            
+            .project-meta {
+                flex-direction: column;
+                gap: 1rem;
+            }
+            
+            .content-section {
+                padding: 1.5rem;
+            }
+            
+            .section-title {
+                font-size: 1.5rem;
+            }
+            
+            .team-grid {
+                grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+            }
+            
+            .project-nav {
+                flex-direction: column;
+                gap: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <div id="header-container"></div>
+
+    <!-- Breadcrumb -->
+    <div class="breadcrumb">
+        <div class="container">
+            <a href="index.html">Início</a> > <a href="projetos.html">Projetos</a> > <span>Sistema de Telemetria para Veículos Elétricos</span>
+        </div>
+    </div>
+
+    <!-- Project Header -->
+    <section class="project-header">
+        <div class="container">
+            <h1 class="project-title">Sistema de Telemetria para Veículos Elétricos</h1>
+            <p class="project-subtitle">Desenvolvimento de uma solução integrada para monitoramento em tempo real de parâmetros críticos em veículos elétricos</p>
+            <span class="status-badge">Em Andamento</span>
+            
+            <div class="project-meta">
+                <div class="meta-item">
+                    <span>📅</span>
+                    <span>Início: Jan/2022 | Previsão: Dez/2024</span>
+                </div>
+                <div class="meta-item">
+                    <span>💰</span>
+                    <span>Financiamento: FAPESP</span>
+                </div>
+                <div class="meta-item">
+                    <span>👥</span>
+                    <span>Coordenador: Prof. Dr. Carlos Silva</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <div class="container">
+        <!-- Introdução -->
+        <section class="content-section">
+            <h2 class="section-title">Introdução</h2>
+            <div class="section-content">
+                <p>O crescimento acelerado da mobilidade elétrica representa uma transformação significativa no setor de transportes, com implicações importantes para a sustentabilidade ambiental e eficiência energética. No entanto, a adoção em larga escala de veículos elétricos (VEs) enfrenta desafios técnicos relacionados ao monitoramento e gestão de parâmetros críticos em tempo real.</p>
+                
+                <p>Este projeto visa desenvolver um sistema integrado de telemetria capaz de monitorar continuamente o desempenho de veículos elétricos, fornecendo dados essenciais para otimização de eficiência energética, manutenção preditiva e melhoria da experiência do usuário.</p>
+                
+                <div class="figure-container">
+                    <img src="https://source.unsplash.com/random/800x400/?electric,car" alt="Veículo elétrico em ambiente urbano" class="figure">
+                    <p class="figure-caption">Figura 1: Crescimento da mobilidade elétrica demanda soluções avançadas de monitoramento</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Materiais e Métodos -->
+        <section class="content-section">
+            <h2 class="section-title">Materiais e Métodos</h2>
+            <div class="section-content">
+                <h3>Arquitetura do Sistema</h3>
+                <p>O sistema proposto baseia-se em uma arquitetura distribuída composta por três módulos principais:</p>
+                <ol>
+                    <li><strong>Módulo de Aquisição:</strong> Sensores especializados para monitoramento de bateria, motor e sistemas auxiliares</li>
+                    <li><strong>Módulo de Processamento:</strong> Unidade central com algoritmos de análise em tempo real</li>
+                    <li><strong>Módulo de Comunicação:</strong> Sistema de transmissão de dados via redes 5G e IoT</li>
+                </ol>
+                
+                <div class="figure-container">
+                    <img src="https://source.unsplash.com/random/800x400/?circuit,technology" alt="Diagrama da arquitetura do sistema" class="figure">
+                    <p class="figure-caption">Figura 2: Arquitetura modular do sistema de telemetria proposto</p>
+                </div>
+                
+                <h3>Metodologia de Desenvolvimento</h3>
+                <p>Adotamos uma abordagem iterativa baseada no framework Scrum, com ciclos de desenvolvimento de 4 semanas. A validação do sistema está sendo realizada em parceria com fabricantes de veículos elétricos, utilizando tanto ambientes controlados em laboratório quanto testes em condições reais de operação.</p>
+            </div>
+        </section>
+
+        <!-- Resultados e Discussões -->
+        <section class="content-section">
+            <h2 class="section-title">Resultados e Discussões</h2>
+            <div class="section-content">
+                <h3>Desempenho do Sistema</h3>
+                <p>Os testes iniciais demonstraram que o sistema é capaz de monitorar mais de 50 parâmetros simultaneamente com uma taxa de amostragem de 100Hz, mantendo uma precisão superior a 98% na aquisição de dados.</p>
+                
+                <div class="chart-container">
+                    <div class="chart">
+                        <div class="chart-bar" style="height: 80%; left: 10%;"></div>
+                        <div class="chart-bar" style="height: 95%; left: 25%;"></div>
+                        <div class="chart-bar" style="height: 70%; left: 40%;"></div>
+                        <div class="chart-bar" style="height: 98%; left: 55%;"></div>
+                        <div class="chart-bar" style="height: 85%; left: 70%;"></div>
+                        <div class="chart-bar" style="height: 90%; left: 85%;"></div>
+                    </div>
+                    <div class="chart-labels">
+                        <span>Temperatura</span>
+                        <span>Voltagem</span>
+                        <span>Corrente</span>
+                        <span>Velocidade</span>
+                        <span>Consumo</span>
+                        <span>Eficiência</span>
+                    </div>
+                </div>
+                <p class="figure-caption">Figura 3: Precisão do sistema na medição de diferentes parâmetros</p>
+                
+                <h3>Impacto na Eficiência Energética</h3>
+                <p>Os dados coletados permitiram identificar oportunidades de otimização que resultaram em uma melhoria de 12% na eficiência energética dos veículos testados. Esta melhoria foi alcançada através do ajuste dinâmico dos parâmetros de operação com base nas condições de uso em tempo real.</p>
+                
+                <div class="figure-container">
+                    <img src="https://source.unsplash.com/random/800x400/?data,analytics" alt="Gráfico de eficiência energética" class="figure">
+                    <p class="figure-caption">Figura 4: Melhoria na eficiência energética após implementação do sistema</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Considerações Finais -->
+        <section class="content-section">
+            <h2 class="section-title">Considerações Finais</h2>
+            <div class="section-content">
+                <p>O sistema de telemetria desenvolvido demonstra ser uma solução viável e eficaz para o monitoramento de veículos elétricos, oferecendo benefícios significativos em termos de eficiência energética, manutenção preditiva e experiência do usuário.</p>
+                
+                <p>Os resultados obtidos até o momento validam a abordagem técnica adotada e abrem caminho para a expansão das funcionalidades do sistema, incluindo a integração com infraestruturas de carregamento inteligente e sistemas de gestão de frotas.</p>
+                
+                <p>Como trabalhos futuros, planejamos explorar a aplicação de técnicas de inteligência artificial para análise preditiva mais avançada e a expansão do sistema para outros modais de transporte elétrico.</p>
+            </div>
+        </section>
+
+        <!-- Equipe do Projeto -->
+        <section class="content-section">
+            <h2 class="section-title">Equipe do Projeto</h2>
+            <div class="section-content">
+                <p>Este projeto conta com uma equipe multidisciplinar composta por especialistas em engenharia elétrica, computação e telecomunicações:</p>
+                
+                <div class="team-grid">
+                    <div class="team-member">
+                        <img src="https://source.unsplash.com/random/150x150/?professor" alt="Coordenador">
+                        <h3>Prof. Dr. Carlos Silva</h3>
+                        <p>Coordenador</p>
+                    </div>
+                    <div class="team-member">
+                        <img src="https://source.unsplash.com/random/150x150/?scientist" alt="Pesquisadora">
+                        <h3>Dr. Ana Oliveira</h3>
+                        <p>Pesquisadora Sênior</p>
+                    </div>
+                    <div class="team-member">
+                        <img src="https://source.unsplash.com/random/150x150/?student" alt="Doutorando">
+                        <h3>João Santos</h3>
+                        <p>Doutorando</p>
+                    </div>
+                    <div class="team-member">
+                        <img src="https://source.unsplash.com/random/150x150/?graduate" alt="Mestranda">
+                        <h3>Maria Costa</h3>
+                        <p>Mestranda</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Referências -->
+        <section class="content-section">
+            <h2 class="section-title">Referências</h2>
+            <div class="section-content">
+                <ol class="reference-list">
+                    <li class="reference-item">SMITH, J. et al. Advanced telemetry systems for electric vehicles. Journal of Electric Vehicle Technology, v. 15, n. 2, p. 45-62, 2022.</li>
+                    <li class="reference-item">JOHNSON, M.; LEE, K. Real-time monitoring of EV battery systems. IEEE Transactions on Vehicular Technology, v. 71, n. 4, p. 1234-1245, 2023.</li>
+                    <li class="reference-item">INTERNATIONAL ENERGY AGENCY. Global EV Outlook 2023. Paris: IEA Publications, 2023.</li>
+                    <li class="reference-item">SILVA, C. et al. Metodologias para desenvolvimento de sistemas de telemetria integrados. In: CONGRESSO BRASILEIRO DE ENGENHARIA ELÉTRICA, 2022, São Paulo. Anais... São Paulo: CBEE, 2022. p. 234-241.</li>
+                    <li class="reference-item">OLIVEIRA, A. et al. Optimization of energy consumption in electric vehicles through telemetry data analysis. Energy Efficiency Journal, v. 18, n. 3, p. 78-92, 2023.</li>
+                </ol>
+            </div>
+        </section>
+    </div>
+
+    <!-- Footer -->
+    <div id="footer-container"></div>
+
+    <script src="assets/js/main.js"></script>
+    <script>
+        // Mobile Menu Toggle
+        const hamburger = document.querySelector('.hamburger');
+        const navMenu = document.querySelector('.nav-menu');
+        
+        hamburger.addEventListener('click', () => {
+            navMenu.classList.toggle('active');
+        });
+        
+        // Close menu when clicking on a link
+        document.querySelectorAll('.nav-menu a').forEach(link => {
+            link.addEventListener('click', () => {
+                navMenu.classList.remove('active');
+            });
+        });
+        
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 70,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+        
+        // Simple chart animation
+        document.addEventListener('DOMContentLoaded', function() {
+            const chartBars = document.querySelectorAll('.chart-bar');
+            chartBars.forEach(bar => {
+                const originalHeight = bar.style.height;
+                bar.style.height = '0%';
+                
+                setTimeout(() => {
+                    bar.style.transition = 'height 1s ease-in-out';
+                    bar.style.height = originalHeight;
+                }, 500);
+            });
+        });
+    </script>
+</body>
+</html>
