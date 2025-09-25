@@ -10,23 +10,17 @@
 </head>
 <body>
     <!-- Header -->
-    <header>
-        <div class="container header-container">
-            <div class="logo">
-                <img src="favicon.png" alt="">
-                RailBee
+    <div id="header-container"></div>
+
+    <a href="proj_modularsys.html">
+        <section class="events">
+            <img src="assets/images/events/16_feteps.png" alt="">
+            <div class="event-text">
+                <h2>Projeto ModularSys</h2>
+                <a href="proj_modularsys.html" class="btn">Saiba Mais</a>
             </div>
-            <div class="hamburger">☰</div>
-            <ul class="nav-menu">
-                <li><a href="index.html">Início</a></li>
-                <li><a href="gallery.html">Galeria</a></li>
-                <li><a href="team.html">Equipe</a></li>
-                <li><a href="publications.html">Produções Acadêmicas</a></li>
-                <li><a href="awards.html">Premiações</a></li>
-                <li><a href="contact.html">Contato</a></li>
-            </ul>
-        </div>
-    </header>
+        </section>
+    </a>
 
     <!-- Hero Section -->
     <section id="home" class="hero">
@@ -160,42 +154,13 @@
     </section>    
 
     <!-- Footer -->
-    <footer>
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-section">
-                    <h3>RailBee</h3>
-                    <p>Grupo de pesquisa dedicado ao avanço da telemetria e tecnologias relacionadas.</p>
-                </div>
-                <div class="footer-section">
-                    <h3>Links Rápidos</h3>
-                    <ul>
-                        <li><a href="#home">Início</a></li>
-                        <li><a href="#about">Sobre</a></li>
-                        <li><a href="#research">Pesquisas</a></li>
-                        <li><a href="#gallery">Galeria</a></li>
-                    </ul>
-                </div>
-                <div class="footer-section">
-                    <h3>Conecte-se</h3>
-                    <div class="social-links">
-                        <a href="#">📱</a>
-                        <a href="#">📷</a>
-                        <a href="#">👔</a>
-                        <a href="#">📺</a>
-                    </div>
-                </div>
-            </div>
-            <div class="copyright">
-                <p>&copy; 2025 Grupo de Pesquisa RaiBee. Todos os direitos reservados.</p>
-            </div>
-        </div>
-    </footer>
+    <div id="footer-container"></div>
 
     <script src="assets/js/main.js"></script>
     <script src="assets/js/gallery.js"></script>
     <script src="assets/js/timeline.js"></script>
     <script src="assets/js/team.js"></script>
+    <script src="assets/js/data/main.js"></script>
     <script>
         // Gallery functionality
         const galleryContainer = document.getElementById('gallery-container');
@@ -203,50 +168,17 @@
         const modalImg = document.getElementById('modal-image');
         const modalClose = document.querySelector('.modal-close');
         let currentFilter = 'all';
-        let visibleImages = 8;
-        galleryImages = [
-            { src: 'http://127.0.0.1:5500/assets/images/gallery/gallery_01.jpeg', category: 'events' },
-            { src: 'http://127.0.0.1:5500/assets/images/gallery/gallery_02.jpeg', category: 'events' },
-            { src: 'http://127.0.0.1:5500/assets/images/gallery/gallery_03.jpeg', category: 'events' },
-            { src: 'http://127.0.0.1:5500/assets/images/gallery/gallery_04.jpeg', category: 'events' },
-        ];        
+        let visibleImages = 8;      
         configureModal(modal, modalImg, modalClose);
         displayImages(galleryContainer);
-
         // Team Functionality
         const teamAtualContainer = document.getElementById('team-atual');
-        const atual = [
-            {name:"Prof. Dr. Rômulo Araújo", role:"Coordenador", image:"assets/images/team/romulo.png", orcid:"https://orcid.org/0000-0001-9355-3322", lates: "http://lattes.cnpq.br/7079843148914551", github: "https://github.com/RomuloCCAraujo", email: "romuloaraujo@recife.ifpe.edu.br", linkedin:""},
-            {name:"Prof. Dr. Henrique Santos", role:"Coordenador", image:"assets/images/team/henrique.png", orcid:"https://orcid.org/0000-0002-9544-7774", lates: "http://lattes.cnpq.br/1664284153985134", github: "https://github.com/hctsantos", email: "henrique.santos@recife.ifpe.edu.br", linkedin:""},
-            {name: "Edson Carvalho",role: "Estudante",image: "assets/images/team/edson.png",orcid: "https://orcid.org/0009-0007-1712-6434",lates: "http://lattes.cnpq.br/5416892205014072",github: "https://github.com/carvalhoedsonn",email: "mailto:ejscf@discente.ifpe.edu.br",linkedin: "https://www.linkedin.com/in/edson-carvalho-7831a425a/"},
-            {name: "Mariana Santos",role: "Estudante",image: "assets/images/team/mariana.png",orcid: "",lates: "http://lattes.cnpq.br/1675535561713236",github: "https://github.com/Mariana-RDS",email: "mailto:mrds@discente.ifpe.edu.br",linkedin: ""}
-        ];
-        displayTeam(teamAtualContainer, atual);
-
+        displayTeam(teamAtualContainer, actualTeam);
         // Timeline Functionality
         const timelinePublicationsContainer = document.getElementById('timeline-publication-container');
         const timelineAwardsContainer = document.getElementById('timeline-award-container');
-        const publications = [
-            {
-                year: 2024,
-                pubs: [
-                    {category: "Artigo", title: "Aplicação do Módulo de Monitoramento da Qualidade do Ar no Sistema Telemétrico para Monitoramento Ambiental nos Sistemas de Transportes Públicos", linkTitle: "2024 - Studies in Engineering and Exact Sciences", link: "https://ojs.studiespublicacoes.com.br/ojs/index.php/sees/article/view/4994"},
-                    {category: "Artigo", title: "Desenvolvimento de um Sistema Telemétrico para Conversores de Energia das Ondas de Baixa Potência Utilizando o Protocolo Railbee", link: "https://ojs.revistacontemporanea.com/ojs/index.php/home/article/view/4560", linkTitle: "2024 - Revista Contemporânea"},
-                    {category: "Patente", title: "Sistema Telemétrico Dinâmico Autônomo Modular para Monitoramento, Controle e Automação", link: "#", linkTitle:"2024 - INPI"},
-                ]
-            }, 
-        ];      
-        const awards = [
-            {
-                year: 2022,
-                pubs: [
-                    {category: "Mostra Tecnológica", title: "Primeiro Lugar  - XIII Congresso Norte Nordeste de Pesquisa e Inovação (CONNEPI): TelemetricSys - Sistema Telemétrico Dinâmico Autônomo e Suas Aplicações", link: "#", linkTitle: "2022 - Registro INPI"},
-                ]
-            }, 
-        ];      
         displayTimeline(timelinePublicationsContainer, publications);        
-        displayTimeline(timelineAwardsContainer, awards);        
-        
+        displayTimeline(timelineAwardsContainer, awards);                
     </script>
 </body>
 </html>

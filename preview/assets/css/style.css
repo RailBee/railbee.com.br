@@ -40,6 +40,27 @@ ul {
     padding: 0 15px;
 }
 
+/* Events */
+.events {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 5rem;
+}
+
+.events .event-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.events h2 {
+    color: red;
+    font-size: 2.5rem;
+}
+
 /* Header */
 header {
     background-color: var(--primary-color);

@@ -47,14 +47,14 @@ function configureModal(modal, modalImg, modalClose) {
     });
 }
 
-function configureFilters(filters, currentFilter, visibleImages) {
+function configureFilters(container, loadMoreBtn, filters, currentFilter, visibleImages) {
     filters.forEach(filter => {
         filter.addEventListener('click', () => {
             filters.forEach(f => f.classList.remove('active'));
             filter.classList.add('active');
             currentFilter = filter.dataset.filter;
             // visibleImages = 8; // Reset visible images count when filter changes
-            displayImages(currentFilter, visibleImages);
+            displayImages(container, loadMoreBtn, currentFilter, visibleImages);
         });
     });
 }
