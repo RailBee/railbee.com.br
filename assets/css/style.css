@@ -41,7 +41,7 @@ ul {
 }
 
 /* Events */
-.events {
+.events > .container {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -54,11 +54,17 @@ ul {
     justify-content: center;
     align-items: center;
     margin-bottom: 1rem;
+    text-align: center;
 }
 
 .events h2 {
     color: red;
     font-size: 2.5rem;
+}
+
+.events img {
+    width: 100%;
+    object-fit: contain;
 }
 
 /* Header */
@@ -472,7 +478,12 @@ footer {
         font-size: 1rem;
     }
 
-    .events {
+    .events > .container {
         flex-direction: column;
     }
+
+    .events h2 {
+        font-size: 2rem;
+    }
+
 }

@@ -8,7 +8,20 @@
 </head>
 <body>
     <!-- Header -->
-    <div id="header-container"></div>
+    <!-- <div id="header-container"></div> -->
+    <header>
+        <div class="container header-container">
+            <div class="logo"><img src="assets/images/logomark.svg">RailBee</div>
+            <div class="hamburger">☰</div>
+            <ul class="nav-menu">
+                <li><a href="index.html">Início</a></li>
+                <li><a href="gallery.html">Galeria</a></li>
+                <li><a href="team.html">Equipe</a></li>
+                <li><a href="publications.html">Produções Acadêmicas</a></li>
+                <li><a href="awards.html">Premiações</a></li>
+            </ul>
+        </div>
+    </header>     
 
     <!-- Projects Section -->
     <section class="projects-section">
@@ -275,7 +288,26 @@
     </section>
 
     <!-- Footer -->
-    <div id="footer-container"></div>
+    <!-- <div id="footer-container"></div> -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>RailBee</h3>
+                    <p>Grupo de pesquisa dedicado ao avanço da telemetria e tecnologias relacionadas.</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Conecte-se</h3>
+                    <div class="social-links">
+                        <a href="mailto:railbee@recife.ifpe.edu.br">✉️</a>
+                    </div>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2025 Grupo de Pesquisa RaiBee. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
 
     <script src="assets/js/main.js"></script>
     <script>
@@ -300,28 +332,9 @@
                     projectIcon.textContent = '+';
                     projectContent.style.maxHeight = '0';
                 }
-                
-                // Close other open items (optional - remove if you want multiple open)
-                /*
-                projectHeaders.forEach(otherHeader => {
-                    if (otherHeader !== header) {
-                        const otherItem = otherHeader.parentElement;
-                        const otherContent = otherHeader.nextElementSibling;
-                        const otherIcon = otherHeader.querySelector('.project-icon');
-                        
-                        otherItem.classList.remove('active');
-                        otherIcon.textContent = '+';
-                        otherContent.style.maxHeight = '0';
-                    }
-                });
-                */
             });
         });
-        
-        // Open first project by default
-        // if (projectHeaders.length > 0) {
-        //     projectHeaders[0].click();
-        // }
+
     </script>
 </body>
 </html>
