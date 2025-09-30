@@ -1,3 +1,6 @@
+// src: Caminho ou URL da imagem.
+// category: Categoria da imagem (ex: events, lab, team).
+
 //Variável definida em js/galley.js
 galleryImages = [
     { src: 'assets/images/gallery/gallery_01.jpeg', category: 'events' },

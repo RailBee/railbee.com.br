@@ -1,3 +1,14 @@
+// Professors, Atual, Egressos (arrays de membros)
+// name: Nome completo da pessoa.
+// role: Função no projeto (ex: Coordenador, Estudante).
+// image: Caminho ou URL da foto do membro.
+// orcid: Link para o perfil ORCID (se houver).
+// lates: Link para o currículo Lattes (se houver).
+// github: Link para o perfil no GitHub (se houver).
+// email: Endereço de e-mail para contato (use "mailto:" antes do e-mail).
+// linkedin: Link para o perfil no LinkedIn (se houver).
+
+
 const professors = [      
         {name:"Prof. Dr. Rômulo Araújo", role:"Coordenador", image:"assets/images/team/romulo.png", orcid:"https://orcid.org/0000-0001-9355-3322", lates: "http://lattes.cnpq.br/7079843148914551", github: "https://github.com/RomuloCCAraujo", email: "romuloaraujo@recife.ifpe.edu.br", linkedin:""},
         {name:"Prof. Dr. Henrique Santos", role:"Coordenador", image:"assets/images/team/henrique.png", orcid:"https://orcid.org/0000-0002-9544-7774", lates: "http://lattes.cnpq.br/1664284153985134", github: "https://github.com/hctsantos", email: "henrique.santos@recife.ifpe.edu.br", linkedin:""},
