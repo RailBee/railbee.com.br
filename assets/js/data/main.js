@@ -53,21 +53,24 @@ const actualTeam = [
 //Últimas publicações
 const publications = [
   {
-    year: 2024,
+    year: 2025,
     pubs: [
       {
-        category: "Artigo",
+        category: "Patente",
         title:
-          "Aplicação do Módulo de Monitoramento da Qualidade do Ar no Sistema Telemétrico para Monitoramento Ambiental nos Sistemas de Transportes Públicos",
-        linkTitle: "Studies in Engineering and Exact Sciences",
-        link: "https://ojs.studiespublicacoes.com.br/ojs/index.php/sees/article/view/4994",
+          "DISPOSITIVO TELEMÉTRICO DE DETECÇÃO, RECEPÇÃO,CONVERSÃO E TRANSMISSÃO DE DADOS REFERENTES AOMONITORAMENTO DA QUALIDADE DO AR ATRAVÉS DE UMA PLURALIDADE DE SENSORES UTILIZANDO UMA VARIEDADEDE PROTOCOLOS DE COMUNICAÇÃO",
+        linkTitle: "INPI",
       },
+    ],
+  },
+  {
+    year: 2025,
+    pubs: [
       {
-        category: "Artigo",
+        category: "Patente",
         title:
-          "Desenvolvimento de um Sistema Telemétrico para Conversores de Energia das Ondas de Baixa Potência Utilizando o Protocolo Railbee",
-        link: "https://ojs.revistacontemporanea.com/ojs/index.php/home/article/view/4560",
-        linkTitle: "Revista Contemporânea",
+          "DISPOSITIVO TELEMÉTRICO PARA O MONITORAMENTO EM TEMPO REAL DE GERADORES DE ENERGIA MAREMOTRIZ ATRAVÉS DE UMA PLURALIDADE DE SENSORES UTILIZANDO UMA VARIEDADE DE PROTOCOLOS DE COMUNICAÇÃO",
+        linkTitle: "INPI",
       },
     ],
   },
