@@ -69,13 +69,6 @@ const publications = [
         link: "https://ojs.revistacontemporanea.com/ojs/index.php/home/article/view/4560",
         linkTitle: "Revista Contemporânea",
       },
-      {
-        category: "Patente",
-        title:
-          "Sistema Telemétrico Dinâmico Autônomo Modular para Monitoramento, Controle e Automação",
-        link: "#",
-        linkTitle: "INPI",
-      },
     ],
   },
 ];
