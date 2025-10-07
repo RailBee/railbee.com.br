@@ -1,0 +1,250 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Área Temática e ODS</title>
+  <style>
+    :root{
+      --bg:#f7f3f0;
+      --card:#ffffff;
+      --accent:#d9bfb3;
+      --muted:#6b6b6b;
+      --title:#2b2b2b;
+      --maxw:900px;
+      --radius:12px;
+      font-family: Inter, "Segoe UI", Roboto, Arial, sans-serif;
+    }
+
+    html,body{
+      margin:0;
+      padding:0;
+      background: linear-gradient(90deg, #fcf9f7 0%, #f3efed 100%);
+      color:var(--title);
+      -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale;
+      height:100%;
+    }
+
+    .wrap{
+      max-width:var(--maxw);
+      margin:36px auto;
+      padding:20px;
+    }
+
+    .slide{
+      background:var(--card);
+      border-radius:var(--radius);
+      box-shadow: 0 8px 24px rgba(35,35,35,0.08);
+      overflow:hidden;
+      display:flex;
+      gap:0;
+      flex-direction:column;
+    }
+
+    /* Header */
+    .slide__header{
+      display:flex;
+      align-items:center;
+      gap:18px;
+      padding:22px 28px;
+      background: linear-gradient(90deg, rgba(217,191,179,0.18), rgba(217,191,179,0.05));
+      border-bottom:1px solid rgba(0,0,0,0.04);
+    }
+    .badge{
+      width:68px;
+      height:68px;
+      min-width:68px;
+      border-radius:10px;
+      background:linear-gradient(180deg,var(--accent), #f5e6e0);
+      display:grid;
+      place-items:center;
+      font-weight:700;
+      color:#4a2f2a;
+      box-shadow: 0 4px 10px rgba(77,43,35,0.08) inset;
+    }
+    h1{
+      font-size:20px;
+      margin:0;
+      letter-spacing:0.2px;
+    }
+    .subtitle{
+      margin:2px 0 0 0;
+      color:var(--muted);
+      font-size:13px;
+    }
+
+    /* Content */
+    .slide__content{
+      display:flex;
+      gap:32px;
+      padding:26px 28px;
+      flex-wrap:wrap;
+    }
+
+    .col{
+      flex:1 1 260px;
+      min-width:220px;
+    }
+
+    .section-title{
+      font-weight:700;
+      font-size:15px;
+      margin:0 0 10px 0;
+    }
+
+    .card{
+      background:linear-gradient(180deg, rgba(245,245,245,0.9), rgba(255,255,255,0.6));
+      border-radius:10px;
+      padding:14px 16px;
+      box-shadow: 0 6px 18px rgba(20,20,20,0.03);
+    }
+
+    .list{
+      margin:0;
+      padding:0;
+      list-style:none;
+      font-size:14px;
+      color:var(--muted);
+    }
+
+    .list li{
+      margin:8px 0;
+      line-height:1.35;
+      color:#2f2f2f;
+    }
+
+    .sub{
+      display:block;
+      margin-top:6px;
+      margin-left:10px;
+      color:var(--muted);
+      font-size:13px;
+    }
+
+    /* ODS area */
+    .ods{
+      display:flex;
+      flex-direction:column;
+      gap:8px;
+      margin-top:6px;
+    }
+
+    .ods-item{
+      display:flex;
+      gap:12px;
+      align-items:center;
+      padding:10px;
+      border-radius:8px;
+      background:rgba(246,246,246,0.8);
+    }
+
+    .ods-code{
+      min-width:54px;
+      height:40px;
+      display:grid;
+      place-items:center;
+      background:#fff;
+      border-radius:8px;
+      font-weight:700;
+      box-shadow: 0 4px 12px rgba(17,17,17,0.04);
+    }
+
+    .ods-text{
+      font-size:14px;
+      color:#2b2b2b;
+    }
+
+    footer{
+      padding:14px 20px;
+      border-top:1px solid rgba(0,0,0,0.04);
+      font-size:13px;
+      color:var(--muted);
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+    }
+
+    @media (max-width:640px){
+      .slide__content{ padding:18px; gap:16px;}
+      .badge{width:56px;height:56px;min-width:56px}
+      h1{font-size:18px}
+    }
+
+    /* Print-friendly */
+    @media print{
+      body{background:#fff;}
+      .wrap{box-shadow:none;}
+      .slide{box-shadow:none;border-radius:0;}
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <article class="slide" role="article" aria-labelledby="slide-title">
+      <header class="slide__header">
+        <div class="badge" aria-hidden="true">ODS</div>
+        <div>
+          <h1 id="slide-title">ÁREA TEMÁTICA E ODS</h1>
+          <p class="subtitle">Resumo das áreas de conhecimento e objetivos de desenvolvimento sustentável vinculados</p>
+        </div>
+      </header>
+
+      <section class="slide__content" aria-label="Conteúdo principal">
+        <div class="col">
+          <h2 class="section-title">Áreas de conhecimento / Subárea</h2>
+
+          <div class="card" role="group" aria-labelledby="areas-label">
+            <p id="areas-label" class="subtitle" style="margin-bottom:10px;">Áreas e subáreas listadas</p>
+
+            <ul class="list" aria-label="Lista de áreas">
+              <li>
+                <strong>Área 01</strong> — Ciências Exatas e da Terra
+                <span class="sub">Subárea: Ciência da Computação</span>
+              </li>
+
+              <li style="margin-top:10px;">
+                <strong>Área 03</strong> — Engenharias
+                <span class="sub">Subárea: Engenharia Elétrica</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="col" aria-labelledby="ods-label">
+          <h2 class="section-title" id="ods-label">ODS vinculados</h2>
+
+          <div class="card" role="list">
+            <div class="ods" role="list">
+              <div class="ods-item" role="listitem">
+                <div class="ods-code">ODS03</div>
+                <div class="ods-text">Saúde e bem-estar</div>
+              </div>
+
+              <div class="ods-item" role="listitem">
+                <div class="ods-code">ODS07</div>
+                <div class="ods-text">Energia limpa e acessível</div>
+              </div>
+
+              <div class="ods-item" role="listitem">
+                <div class="ods-code">ODS09</div>
+                <div class="ods-text">Inovação e infraestrutura</div>
+              </div>
+
+              <div class="ods-item" role="listitem">
+                <div class="ods-code">ODS11</div>
+                <div class="ods-text">Cidades e comunidades sustentáveis</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <footer>
+        <div>Fonte: dados fornecidos</div>
+        <div aria-hidden="true">•</div>
+      </footer>
+    </article>
+  </div>
+</body>
+</html>

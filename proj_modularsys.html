@@ -207,6 +207,23 @@
             background: #2980b9;
         }
         
+        .ods {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+
+        .ods ul {
+            margin: 1rem;
+        }
+
+        .ods h3 {
+            margin: 0;
+        }
+
+        .ods .area {
+            font-weight: bold;
+        }
         
         /* Responsive */
         @media (max-width: 768px) {           
@@ -298,24 +315,43 @@
 
     <!-- Main Content -->
     <div class="container">
+
+        <!-- ODS -->
+        <section class="content-section">
+            <h2 class="section-title">Áreas Temáticas e ODS</h2>
+            <div class="section-content">
+                <div class="ods">
+
+                    <div>
+                        <h3>Áreas de conhecimento/Subárea:</h3>
+                        <ul>
+                            <li class="area">Área 01 – Ciências Exatas e da Terra</li>
+                            <li>Subárea: Ciência da Computação</li>
+                            <li class="area">Área 03 – Engenharias</li>
+                            <li>Subárea: Engenharia Elétrica</li>
+                        </ul>
+                    </div>
+
+                    <div>
+                        <h3>ODS vinculados:</h3>
+                        <ul>
+                            <li>ODS03 – Saúde e bem-estar</li>
+                            <li>ODS07 – Energia limpa e acessível</li>
+                            <li>ODS09 – Inovação e infraestrutura</li>
+                            <li>ODS11 – Cidades e comunidades sustentáveis</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
         <!-- Introdução -->
         <section class="content-section">
             <h2 class="section-title">Introdução</h2>
             <div class="section-content">
                 <p>A qualidade do ar, a eficiência do transporte público e a gestão da energia são desafios críticos para cidades inteligentes e sustentáveis. A ausência de monitoramento em tempo real compromete a tomada de decisões e dificulta a implementação de soluções eficazes.</p>
                 <p>O ModularSys é um sistema telemétrico dinâmico, autônomo e modular que permite o monitoramento e automação desses processos, promovendo maior eficiência urbana. Como desenvolver uma tecnologia baixo custo, escalável e autônoma capaz de monitorar em tempo real o meio ambiente, o transporte público e a gestão de energia, promovendo cidades mais eficientes e sustentáveis?</p>
-
-                <div class="figure-container">
-                    <img src="assets/images/projects/modularsys/telemetry_snept.png" alt="Aplicações do ModularSys" class="figure">
-                    <p class="figure-caption">Figura 1: ModularSys e a telemetria</p>
-                </div>
-
                 <p>A implementação do ModularSys possibilitará a coleta e análise precisa de dados urbanos, permitindo a automação de processos e a otimização da gestão de recursos, contribuindo para cidades mais conectadas e sustentáveis.</p>
-
-                <div class="figure-container">
-                    <img src="assets/images/projects/modularsys/applications_snept.png" alt="Aplicações do ModularSys" class="figure">
-                    <p class="figure-caption">Figura 2: Aplicações do ModularSys</p>
-                </div>
             </div>
         </section>
 
@@ -323,17 +359,32 @@
         <section class="content-section">
             <h2 class="section-title">Materiais e Métodos</h2>
             <div class="section-content">
-                <p>O ModularSys é um sistema telemétrico modular que utiliza Redes de Sensores Sem Fio, Ethernet e Fibra Óptica para comunicação. Ele opera com Wi-Fi, LoRa, ZigBee, Satélite, Bluetooth e GSM (Global System for Mobile Communications), escolhendo o protocolo conforme a necessidade da aplicação.  </p>
-                <p>As Estações Módulo (EM) transmitem dados para o Broker MQTT VerneMQ, enquanto aquelas sem conexão utilizam Estações Base ou Roteadoras e em caso de falha, os dados são armazenados localmente. O Broker MQTT VerneMQ atua como um orquestrador de tráfego de dados, recebendo informações das EMs e distribuindo-as aos demais módulos do sistema. </p>
+                <p>O ModularSys é um sistema telemétrico modular que utiliza Redes de Sensores Sem Fio, Ethernet e Fibra Óptica para comunicação. 
+                    
                 <div class="figure-container">
-                    <img src="assets/images/projects/modularsys/protocols_snept.png" alt="Diagrama da arquitetura do sistema" class="figure">
-                    <p class="figure-caption">Figura 3: Diferentes protocolos suportados</p>
+                    <img src="assets/images/projects/modularsys/telemetry_snept.png" alt="Sistema Telemétrico" class="figure">
+                    <p class="figure-caption">Figura 1: Sistema Telemétrico</p>
+                </div>
+                    
+                    
+                <p>Ele opera com Wi-Fi, LoRa, ZigBee, Satélite, Bluetooth e Celular, escolhendo o protocolo conforme a necessidade da aplicação. As Estações Módulo (EM) transmitem dados para o Broker MQTT VerneMQ, enquanto aquelas sem conexão utilizam Estações Base ou Roteadoras e em caso de falha, os dados são armazenados localmente. O Broker MQTT VerneMQ atua como um orquestrador de tráfego de dados, recebendo informações das EMs e distribuindo-as aos demais módulos do sistema. </p>
+                <div class="figure-container">
+                    <img src="assets/images/projects/modularsys/protocols_snept.png" alt="Protocolos de Comunicação" class="figure">
+                    <p class="figure-caption">Figura 2: Protocolos de Comunicação</p>
                 </div>
 
+                <p>A sua modularidade permite que o sistema seja usado em uma variedade de aplicações de monitoramento, incluindo, mas não se limitando a (Figura 3).</p>
+
+                <div class="figure-container">
+                    <img src="assets/images/projects/modularsys/applications_snept.png" alt="Aplicações do ModularSys" class="figure">
+                    <p class="figure-caption">Figura 3: Aplicações</p>
+                </div>
+                
+                <p>As Estações Módulo (EM) transmitem dados para o Broker MQTT VerneMQ, enquanto aquelas sem conexão utilizam Estações Base ou Roteadoras e em caso de falha, os dados são armazenados localmente. O Broker MQTT VerneMQ atua como um orquestrador de tráfego de dados, recebendo informações das EMs e distribuindo-as aos demais módulos do sistema.</p>
                 <p>O Monitor VerneMQ processa e armazena as informações em um Banco de Dados de Séries Temporais, permitindo análises eficientes. A API se conecta ao Cliente VueJS, possibilitando monitoramento em tempo real pelo Painel Grafana Dashboard, com gráficos interativos para identificação de padrões.</p>
                 <div class="figure-container">
-                    <img src="assets/images/projects/modularsys/architecture.png" alt="Diagrama da arquitetura do sistema" class="figure">
-                    <p class="figure-caption">Figura 2: Arquitetura do ModularSys</p>
+                    <img src="assets/images/projects/modularsys/architecture_vert.png" alt="Diagrama da arquitetura do sistema" class="figure">
+                    <p class="figure-caption">Figura 4: Arquitetura do ModularSys</p>
                 </div>
                 
                 <h3>Metodologia de Desenvolvimento</h3>
